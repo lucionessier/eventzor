@@ -16,6 +16,14 @@ h3 {
     font-family: $cuerpo-secundario;
 }
 
+h4 {
+    color: $color-terciario;
+    font-weight: bold;
+    text-align: center;
+    font-family: $cuerpo;
+    font-style: italic;
+}
+
 h5 {
     color: $color-secundario;
     font-weight: bold;
