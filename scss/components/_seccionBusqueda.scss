@@ -1,0 +1,21 @@
+/* Seccion Busqueda */
+
+.busqueda {
+    margin: 1.5rem 0 2.5rem 0;
+    text-align: center;
+}
+
+.barra-busqueda {
+    border-radius: 20px;
+    margin: 2.5em;
+
+    &:hover {
+        border-color: $color-principal;
+    }
+
+    &:focus {
+        border-color: $color-terciario;
+    }
+
+}
+

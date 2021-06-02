@@ -1,0 +1,25 @@
+/* Sección próximos eventos */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: transparent;
+
+    &:hover {
+
+        -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -o-transform: scale(1.03);
+        box-shadow: 5px 5px 5px #b9b9b9;
+    }
+}
+
+.container-margin {
+    margin: 3.5em 0 3.5em 0;
+}

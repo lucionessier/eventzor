@@ -1,0 +1,56 @@
+/* Estilos barra de navegación */
+
+
+nav.navegacion-principal {
+    padding: 5px;
+    background-color: white;
+}
+
+nav a {
+    color: $color-principal;
+    text-decoration: none;
+    font-family: $cuerpo;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $color-terciario;
+        border-bottom: 2px solid $color-secundario;
+    }
+
+    &:active {
+        color: $color-secundario;
+        border-bottom: 3px solid $color-secundario;
+    }
+
+}
+
+.logo {
+    border-bottom: none;
+
+    &:hover {
+        border-bottom: none;
+    }
+}
+
+
+.navbar-collapse {
+    flex-basis: 100%;
+    align-items: center;
+    flex-grow: 0 !important;
+}
+
+.nav-link {
+    display: inline;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-align: center !important;
+}
+
+.correccion-width {
+    width: 100vw !important;
+}

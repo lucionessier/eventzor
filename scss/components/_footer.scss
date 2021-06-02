@@ -1,0 +1,27 @@
+// Estilos footer
+
+footer {
+    background-color: $color-secundario;
+    padding-bottom: 20px;
+
+    div a {
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 5px;
+        text-decoration: none;
+        font-family: $cuerpo;
+
+        &:hover {
+            color: $color-terciario;
+        }
+    }
+
+    div h3 {
+        color: $color-principal;
+        font-family: $cuerpo;
+        font-weight: bold;
+        text-align: center;
+    }
+}

@@ -1,0 +1,64 @@
+/* Botones */
+
+.boton {
+    background-color: $color-principal;
+    border-radius: 20px;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $color-terciario;
+        border-radius: 20px;
+        color: white;
+        border-color: transparent;
+        font-weight: bold;
+        box-shadow: 5px 5px 5px #b9b9b9;
+    }
+}
+
+.boton-busqueda {
+    background-color: $color-secundario;
+    border-radius: 20px;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%;
+    margin: 2.5em;
+
+    &:hover {
+        background-color: $color-terciario;
+        border-radius: 20px;
+        color: white;
+        border-color: transparent;
+        font-weight: bold;
+    }
+}
+
+.boton-proximos-eventos {
+    background-color: transparent;
+    border-radius: 20px;
+    color: $color-principal;
+    border: 1px solid $color-principal;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-terciario;
+        border-radius: 20px;
+        color: white;
+        border-color: transparent;
+        font-weight: bold;
+    }
+
+    &:active {
+        background-color: $color-terciario;
+        border-radius: 20px;
+        color: white;
+        border-color: transparent;
+        font-weight: bold;
+    }
+}

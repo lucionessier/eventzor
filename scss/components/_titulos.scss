@@ -1,0 +1,29 @@
+/* Titulos */
+
+h1 {
+    color: $color-terciario;
+    text-align: center;
+    font-family: $titulo-principal;
+}
+
+h2 {
+    color: $color-principal;
+    font-family: $cuerpo;
+}
+
+h3 {
+    color: $color-secundario;
+    font-family: $cuerpo-secundario;
+}
+
+h5 {
+    color: $color-secundario;
+    font-weight: bold;
+    text-align: center;
+    font-family: $cuerpo-secundario;
+}
+
+.descripcion-evento {
+    font-style: italic;
+    text-align: center;
+}
