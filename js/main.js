@@ -1,6 +1,151 @@
-// Creamos un array vacío, que luego se rellenará con los datos que ingrese el usuario
+// Creamos un array con 20 objetos (distintas bandas), para que posteriormente puedan iterarse tanto en la search bar como en el resto del código
 
-const bandas = [];
+const bandas = [
+    
+    {
+        imgFile: 'img/proximo1.jpg',
+        fechaBanda: "30/08/2021",
+        nombreBanda: "Red Hot Chili Peppers",
+        lugarBanda: "Geekbar, Nueva York, USA"
+    },
+
+    {
+        imgFile: 'img/proximo2.jpg',
+        fechaBanda: "31/09/2021",
+        nombreBanda: "Coldplay",
+        lugarBanda: "CoderBar, Londres, Reino Unido"
+    },
+
+    {
+        imgFile: 'img/proximo3.jpg',
+        fechaBanda: "31/10/2021",
+        nombreBanda: "Twenty One Pilots",
+        lugarBanda: "Ancient Throne, Croacia, Europa"
+    },
+
+    {
+        imgFile: 'img/proximo4.jpg',
+        fechaBanda: "20/11/2021",
+        nombreBanda: "Maroon 5",
+        lugarBanda: "Big Bang T. , Sudáfrica, África"
+    },
+
+    {
+        imgFile: 'img/proximo5.jpg',
+        fechaBanda: "20/10/2021",
+        nombreBanda: "AC/DC",
+        lugarBanda: "Klusterhoefer , Alemania, Europa"
+    },
+
+    {
+        imgFile: 'img/proximo6.jpg',
+        fechaBanda: "17/08/2021",
+        nombreBanda: "Metallica",
+        lugarBanda: "Shinzen, China, Asia"
+    },
+
+    {
+        imgFile: 'img/proximo7.jpg',
+        fechaBanda: "06/07/2021",
+        nombreBanda: "Ed Sheeran",
+        lugarBanda: "Huan ze, Vietnam, Asia"
+    },
+
+    {
+        imgFile: 'img/proximo8.jpg',
+        fechaBanda: "09/12/2021",
+        nombreBanda: "The Lumineers",
+        lugarBanda: "Trip se, Polonia, Europa"
+    },
+
+    {
+        imgFile: 'img/proximo9.jpg',
+        fechaBanda: "08/09/2021",
+        nombreBanda: "Linkin Park",
+        lugarBanda: "The Noods, Londres, Reino Unido"
+    },
+
+    {
+        imgFile: 'img/proximo10.jpg',
+        fechaBanda: "08/11/2021",
+        nombreBanda: "Aerosmith",
+        lugarBanda: "Nak, Los Angeles, California"
+    },
+
+    {
+        imgFile: 'img/proximo11.jpg',
+        fechaBanda: "08/10/2021",
+        nombreBanda: "Post Malone",
+        lugarBanda: "Stripped, Los Angeles, California"
+    },
+
+    {
+        imgFile: 'img/proximo12.jpg',
+        fechaBanda: "14/11/2021",
+        nombreBanda: "J Balvin",
+        lugarBanda: "NLa Guachita, Bogotá, Colombia"
+    },
+
+    {
+        imgFile: 'img/proximo13.jpg',
+        fechaBanda: "10/10/2021",
+        nombreBanda: "Cazzu",
+        lugarBanda: "Milk, Córdoba, Argentina"
+    },
+
+    {
+        imgFile: 'img/proximo14.jpg',
+        fechaBanda: "27/11/2021",
+        nombreBanda: "Solomun",
+        lugarBanda: "Tuk Tuk, Tulum, México"
+    },
+
+    {
+        imgFile: 'img/proximo15.jpg',
+        fechaBanda: "28/11/2021",
+        nombreBanda: "Maceo Plex",
+        lugarBanda: "DGTL Festival, Países Bajos, Europa"
+    },
+
+    {
+        imgFile: 'img/proximo16.jpg',
+        fechaBanda: "28/11/2021",
+        nombreBanda: "Soda Stereo",
+        lugarBanda: "Estadio Único La Plata, Buenos Aires, Argentina"
+    },
+
+    {
+        imgFile: 'img/proximo17.jpg',
+        fechaBanda: "25/12/2021",
+        nombreBanda: "Babasónicos",
+        lugarBanda: "Studio Theater, Córdoba, Argentina"
+    },
+
+    {
+        imgFile: 'img/proximo18.jpg',
+        fechaBanda: "17/10/2021",
+        nombreBanda: "Ciro y Los Persas",
+        lugarBanda: "El Monumental, Buenos Aires, Argentina"
+    },
+
+    {
+        imgFile: 'img/proximo19.jpg',
+        fechaBanda: "15/10/2021",
+        nombreBanda: "La Mona Jiménez",
+        lugarBanda: "La Morocha, Córdoba, Argentina"
+    },
+
+    {
+        imgFile: 'img/proximo20.jpg',
+        fechaBanda: "13/09/2021",
+        nombreBanda: "La Barra",
+        lugarBanda: "Cuba Inc, Córdoba, Argentina"
+    },
+    
+
+];
+
+
 let cantidad = 3;
 
 //Preguntará, en este caso 3 veces, ya que cantidad es igual a 3, al usuario que ingrese bandas.
