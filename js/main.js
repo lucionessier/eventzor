@@ -223,6 +223,8 @@ function mostrarBandas() {
 
     posicion = posicion + 4;
 
+    
+
     // Cuando posición llegue a 20, se ejecutará lo siguiente:
 
     if(posicion === 20) {
@@ -237,3 +239,18 @@ function mostrarBandas() {
     }
 
 }
+
+// Funcion para guardar la busqueda en localStorage
+
+function guardarBusqueda() {
+    const inputBusqueda = document.getElementById('searchBar').value;
+    console.log(inputBusqueda);
+
+    localStorage.setItem('busqueda', JSON.stringify(inputBusqueda));
+
+  }
+
+
+
+
+
