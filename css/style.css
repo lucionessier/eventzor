@@ -217,4 +217,37 @@ footer div h3 {
   margin: 3.5em 0 3.5em 0;
 }
 
+/* Estilos formulario */
+.inputs-form {
+  margin: 2em 0 2em 0;
+  border-radius: 20px;
+  font-family: "Fira Sans", sans-serif;
+}
+.inputs-form:hover {
+  border-color: #ff2e93;
+}
+.inputs-form:focus {
+  border-color: #142664;
+}
+
+select, textarea {
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 20px;
+}
+select:hover, textarea:hover {
+  border-color: #ff2e93;
+}
+select:focus, textarea:focus {
+  border-color: #142664;
+}
+
+.section-margin {
+  margin: 5em 0 4em 0;
+}
+
+.form-check-input:checked {
+  background-color: #142664;
+  border-color: #142664;
+}
+
 /*# sourceMappingURL=style.css.map */

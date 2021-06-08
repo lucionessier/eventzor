@@ -1,0 +1,39 @@
+/* Estilos formulario */
+
+.inputs-form {
+    margin: 2em 0 2em 0;
+    border-radius: 20px;
+    font-family: $cuerpo;
+
+    &:hover {
+        border-color: $color-principal;
+    }
+
+    &:focus {
+        border-color: $color-terciario;
+    }
+
+}
+
+select,textarea {
+    
+        font-family: $cuerpo;
+        border-radius: 20px;
+    
+        &:hover {
+            border-color: $color-principal;
+        }
+    
+        &:focus {
+            border-color: $color-terciario;
+        }
+}
+
+.section-margin {
+    margin: 5em 0 4em 0;
+}
+
+.form-check-input:checked {
+    background-color: $color-terciario;
+    border-color: $color-terciario;
+}
