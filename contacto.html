@@ -74,9 +74,17 @@
             <h2 style="text-align: center;">Escribinos si te queda alguna duda de cómo funciona el servicio!</h2>
     
     
+            <div class="container-fluid" id="mensaje">
+
+            </div>
+
+            <div class="container-fluid" id="botonRetorno">
+
+            </div>
+
             <!--Formulario INICIO-->
             
-            <form class="container form-floating col-md-6">
+            <form class="container form-floating col-md-6" id="formularioContacto">
                 
                 <!--Nombre, apellido,email-->
                 <div class="mb-3">
@@ -116,7 +124,7 @@
     
                   <!--Enviar formulario-->
     
-                  <button type="submit" class="d-flex justify-content-center boton btn btn-primary" style="margin: 0 auto";">Enviar</button>
+                  <button type="submit" class="d-flex justify-content-center boton btn btn-primary" id="botonEnviar" style="margin: 0 auto";">Enviar</button>
                   
             </form>
     
@@ -161,9 +169,57 @@
     
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         
-        <script src="js/main.js"></script> 
+        <!-- <script src="js/main.js"></script>  -->
         
+        <!--Bootstrap-->
+
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+        <!--Jquery-->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            
+            $(document).ready(function() {
+
+                // Tomo el ID formularioContacto y el evento "Submit" del botón "ENVIAR"
+
+                $('#formularioContacto').submit(function(e) {
+                
+                // El prevent default para que prevenga el comportamiento de refrescar la página por default del submit
+                 e.preventDefault();
+
+
+                // Creo una variable que tome el valor del input "nombre" del formulario
+                let name = $("#nombre").val();
+
+                // La idea es que al dar click al botón enviar, aparezca el siguiente mensaje, que toma el valor del input del ID name declarado anteriormente
+
+                $('#mensaje').append(`
+
+                <h3 style="text-align: center; font-weight:bold; margin-top:2em">Gracias por contactarte con nosotros, ${name} ! A la brevedad te daremos una respuesta :)</h3>
+
+                `)
+
+                // Y a su vez, que se borre el h2 y el formulario, quedando solamente el botón de agradecimiento
+
+                $('h2').remove();
+                $('#formularioContacto').remove();
+
+                // Por último, le agregué al div con Id botonRetorno, un botón que haga regresar al inicio del sitio
+
+                $('#botonRetorno').append(`
+                <button class="d-flex justify-content-center boton btn btn-primary" style="margin: 0 auto";"><a href="index.html" style="color:white; text-decoration: none;">VOLVER AL INICIO</a></button>
+                `)
+
+                })
+
+
+
+            });
+
+        </script>
 </body>
 </html>
