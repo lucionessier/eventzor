@@ -7,6 +7,7 @@ const bandas = [
         fechaBanda: "30/08/2021",
         nombreBanda: "Red Hot Chili Peppers",
         lugarBanda: "Geekbar, Nueva York, USA",
+        regionBanda: "América del Norte"
 
     },
 
@@ -15,6 +16,7 @@ const bandas = [
         fechaBanda: "31/09/2021",
         nombreBanda: "Coldplay",
         lugarBanda: "CoderBar, Londres, Reino Unido",
+        regionBanda: "Europa"
 
     },
 
@@ -22,7 +24,8 @@ const bandas = [
         imgFile: "img/proximo3.jpg",
         fechaBanda: "31/10/2021",
         nombreBanda: "Twenty One Pilots",
-        lugarBanda: "Ancient Throne, Croacia, Europa",
+        lugarBanda: "Ancient Throne, Croacia",
+        regionBanda: "Europa"
 
     },
 
@@ -30,7 +33,8 @@ const bandas = [
         imgFile: "img/proximo4.jpg",
         fechaBanda: "20/11/2021",
         nombreBanda: "Maroon 5",
-        lugarBanda: "Big Bang T. , Sudáfrica, África",
+        lugarBanda: "Big Bang T. , Sudáfrica",
+        regionBanda: "África"
 
     },
 
@@ -38,7 +42,8 @@ const bandas = [
         imgFile: "img/proximo5.jpg",
         fechaBanda: "20/10/2021",
         nombreBanda: "AC/DC",
-        lugarBanda: "Klusterhoefer , Alemania, Europa",
+        lugarBanda: "Klusterhoefer , Alemania",
+        regionBanda: "Europa"
 
     },
 
@@ -46,7 +51,8 @@ const bandas = [
         imgFile: "img/proximo6.jpg",
         fechaBanda: "17/08/2021",
         nombreBanda: "Metallica",
-        lugarBanda: "Shinzen, China, Asia",
+        lugarBanda: "Shinzen, China",
+        regionBanda: "Asia"
 
     },
 
@@ -54,7 +60,8 @@ const bandas = [
         imgFile: "img/proximo7.jpg",
         fechaBanda: "06/07/2021",
         nombreBanda: "Ed Sheeran",
-        lugarBanda: "Huan ze, Vietnam, Asia",
+        lugarBanda: "Huan ze, Vietnam",
+        regionBanda: "Asia"
 
     },
 
@@ -62,7 +69,8 @@ const bandas = [
         imgFile: "img/proximo8.jpg",
         fechaBanda: "09/12/2021",
         nombreBanda: "The Lumineers",
-        lugarBanda: "Trip se, Polonia, Europa",
+        lugarBanda: "Trip se, Polonia",
+        regionBanda: "Europa"
 
     },
 
@@ -71,6 +79,7 @@ const bandas = [
         fechaBanda: "08/09/2021",
         nombreBanda: "Linkin Park",
         lugarBanda: "The Noods, Londres, Reino Unido",
+        regionBanda: "Europa"
 
     },
 
@@ -79,6 +88,7 @@ const bandas = [
         fechaBanda: "08/11/2021",
         nombreBanda: "Aerosmith",
         lugarBanda: "Nak, Los Angeles, California",
+        regionBanda: "América del Norte"
 
     },
 
@@ -87,6 +97,7 @@ const bandas = [
         fechaBanda: "08/10/2021",
         nombreBanda: "Post Malone",
         lugarBanda: "Stripped, Los Angeles, California",
+        regionBanda: "América del Norte"
 
     },
 
@@ -95,6 +106,7 @@ const bandas = [
         fechaBanda: "14/11/2021",
         nombreBanda: "J Balvin",
         lugarBanda: "NLa Guachita, Bogotá, Colombia",
+        regionBanda: "América del Sur"
 
     },
 
@@ -103,6 +115,7 @@ const bandas = [
         fechaBanda: "10/10/2021",
         nombreBanda: "Cazzu",
         lugarBanda: "Milk, Córdoba, Argentina",
+        regionBanda: "América del Sur"
 
     },
 
@@ -111,6 +124,7 @@ const bandas = [
         fechaBanda: "27/11/2021",
         nombreBanda: "Solomun",
         lugarBanda: "Tuk Tuk, Tulum, México",
+        regionBanda: "América del Norte"
 
     },
 
@@ -118,7 +132,8 @@ const bandas = [
         imgFile: "img/proximo15.jpg",
         fechaBanda: "28/11/2021",
         nombreBanda: "Maceo Plex",
-        lugarBanda: "DGTL Festival, Países Bajos, Europa",
+        lugarBanda: "DGTL Festival, Países Bajos",
+        regionBanda: "Europa"
 
     },
 
@@ -127,6 +142,7 @@ const bandas = [
         fechaBanda: "28/11/2021",
         nombreBanda: "Soda Stereo",
         lugarBanda: "Estadio Único La Plata, Buenos Aires, Argentina",
+        regionBanda: "América del Sur"
 
     },
 
@@ -135,6 +151,7 @@ const bandas = [
         fechaBanda: "25/12/2021",
         nombreBanda: "Babasónicos",
         lugarBanda: "Studio Theater, Córdoba, Argentina",
+        regionBanda: "América del Sur"
 
     },
 
@@ -143,6 +160,7 @@ const bandas = [
         fechaBanda: "17/10/2021",
         nombreBanda: "Ciro y Los Persas",
         lugarBanda: "El Monumental, Buenos Aires, Argentina",
+        regionBanda: "América del Sur"
 
     },
 
@@ -151,6 +169,7 @@ const bandas = [
         fechaBanda: "15/10/2021",
         nombreBanda: "La Mona Jiménez",
         lugarBanda: "La Morocha, Córdoba, Argentina",
+        regionBanda: "América del Sur"
 
     },
 
@@ -159,6 +178,7 @@ const bandas = [
         fechaBanda: "13/09/2021",
         nombreBanda: "La Barra",
         lugarBanda: "Cuba Inc, Córdoba, Argentina",
+        regionBanda: "América del Sur"
 
     },
     
@@ -180,7 +200,7 @@ for (let i = 0; i < bandas.length && i <= 3 ; i++) {
       <div class="card-body container row justify-content-center"></div>
         <h5>${bandas[i].fechaBanda}</h5>
         <h4 class="card-title">${bandas[i].nombreBanda}</h4>
-        <p class="descripcion-evento">${bandas[i].lugarBanda}</p>
+        <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
         <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
       </div>
     </div>
@@ -213,7 +233,7 @@ function mostrarBandas() {
           <div class="card-body container row justify-content-center"></div>
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
-            <p class="descripcion-evento">${bandas[i].lugarBanda}</p>
+            <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
             <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
           </div>
         </div>
