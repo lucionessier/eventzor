@@ -61,6 +61,29 @@ h5 {
   border-color: #142664;
 }
 
+/* Dropdowns*/
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #ff2e93 !important;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.dropdown-item:hover {
+  color: #142664 !important;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* Botones */
 .boton {
   background-color: #ff2e93;
