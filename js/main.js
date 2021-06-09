@@ -295,3 +295,5 @@ for (const banda of bandas) {
 
 // Almaceno el listado de bandas para que cuando el usuario loguee nuevamente estén guardados los valores
 guardarLocal("infoBandas", JSON.stringify(bandas));
+
+
