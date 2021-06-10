@@ -1,6 +1,6 @@
 // Creamos un array con 20 objetos (distintas bandas), para que posteriormente puedan iterarse tanto en la search bar como en el resto del código
 
-const bandas = [
+let bandas = [
     
     {
         imgFile: "img/proximo1.jpg",
@@ -188,26 +188,31 @@ const bandas = [
 
 // Iteramos las bandas para que se muestren solamente 4, en cada caso se crea una card distinta
 
-for (let i = 0; i < bandas.length && i <= 3 ; i++) {
+function proxBandas () {
+    
+    for (let i = 0; i < bandas.length && i <= 3 ; i++) {
 
-    let crearCard = document.querySelector('#proximosEventos');
-
-    crearCard.innerHTML += `
-    <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
-    <div class="card align-items-center">
-      <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
-      
-      <div class="card-body container row justify-content-center"></div>
-        <h5>${bandas[i].fechaBanda}</h5>
-        <h4 class="card-title">${bandas[i].nombreBanda}</h4>
-        <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-        <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
-      </div>
-    </div>
-  </div>`;
-
-
+        let crearCard = document.querySelector('#proximosEventos');
+    
+        crearCard.innerHTML += `
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="card align-items-center">
+          <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
+          
+          <div class="card-body container row justify-content-center"></div>
+            <h5>${bandas[i].fechaBanda}</h5>
+            <h4 class="card-title">${bandas[i].nombreBanda}</h4>
+            <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
+            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+          </div>
+        </div>
+      </div>`;
+    
+    
+    }
 }
+
+proxBandas();
 
 // Creo una variable "displayMore = ver más en ingles". La agarro con elementbyId y le agrego el eventlistener que va a hacer que vaya mostrando el resto de los eventos cada vez que le hago click al boton .
 
@@ -220,7 +225,6 @@ var posicion = 4;
 //La funcion del addeventListener que va creando el resto de las cards cada vez que el boton es apretado
 function mostrarBandas() { 
 
-    console.log('botonVerMas');
 
     for(let i=posicion; i < (posicion +4); i++) {
         let crearCard = document.querySelector('#proximosEventos');

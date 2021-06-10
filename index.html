@@ -186,7 +186,7 @@
 
         <div class="container-fluid row justify-content-center" style="margin-bottom: 2em;">
 
-          <h1 class="container" style="margin: 1em 0 1em 0;">PRÓXIMOS EVENTOS</h1>
+          <h1 class="container" style="margin: 1em 0 1em 0;" id="proximosEventosTitle">PRÓXIMOS EVENTOS</h1>
         
           <div id="proximosEventos" class="container-fluid row">
 
@@ -298,7 +298,8 @@
 
       $(document).ready(function() {
 
-
+          
+            
             // Manipulacion del DOM para dropdowns de regiones
 
             const botonAmericaNorte = $('#americaNorte');
@@ -309,8 +310,29 @@
             const botonOceania = $('#oceania');
 
             // América del Norte
-            botonAmericaNorte.click(function(){
-              console.log("Funciona el boton")
+            botonAmericaNorte.click(function(e){
+              
+              // El preventDefault para el boton
+              e.preventDefault();
+              
+              // Al hacer click en el boton América del Norte, se oculta el botón verMas
+
+              $("#verMas").hide();
+
+              // Al H1 con el id eventosTitle le agrego el título "América del Norte", en este caso
+
+              $("#proximosEventosTitle").append(
+                ` EN AMÉRICA DEL NORTE`
+              )
+
+              // Utilizo filter para que muestre solo los elementos con "America del Norte" del array de objetos
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del norte')
+
+              proxBandas();
+
+
+              
             })
 
             // América del Sur
