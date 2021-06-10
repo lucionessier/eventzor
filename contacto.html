@@ -199,21 +199,34 @@
 
                 $('#mensaje').append(`
 
-                <h3 style="text-align: center; font-weight:bold; margin-top:2em">Gracias por contactarte con nosotros, ${name} ! A la brevedad te daremos una respuesta :)</h3>
+                <h3 style="text-align: center; font-weight:bold; margin:2em 0 2em 0">Gracias por contactarte con nosotros, ${name} ! A la brevedad te daremos una respuesta :)</h3>
 
                 `)
 
+                .hide()
+                .fadeIn(1500)
+                
+                ;
+
+
+
                 // Y a su vez, que se borre el h2 y el formulario, quedando solamente el botón de agradecimiento
 
-                $('h2').remove();
-                $('#formularioContacto').remove();
+              
+                $('h2').fadeOut("slow");
+                $('#formularioContacto').toggle("slow");
 
                 // Por último, le agregué al div con Id botonRetorno, un botón que haga regresar al inicio del sitio
 
                 $('#botonRetorno').append(`
                 <button class="d-flex justify-content-center boton btn btn-primary" style="margin: 0 auto";"><a href="index.html" style="color:white; text-decoration: none;">VOLVER AL INICIO</a></button>
                 `)
-
+                
+                .hide()
+                .fadeIn(2500);
+                
+                ;
+                
                 })
 
 
