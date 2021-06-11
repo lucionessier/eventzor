@@ -192,6 +192,11 @@
 
           </div>
 
+          <div id="eventosFiltrados" class="container-fluid row">
+
+          </div>
+
+
           <div class="container row">
 
             <a  id="verMas" class="container boton btn btn-primary justify-content-center align-content-center col-md-2" style="margin-bottom:1em;">VER MÁS</a>
@@ -315,9 +320,10 @@
               // El preventDefault para el boton
               e.preventDefault();
               
-              // Al hacer click en el boton América del Norte, se oculta el botón verMas
+              // Al hacer click en el boton América del Norte, se oculta el div de proximos eventos y muestra solo los filtrados de América del Norte
 
-              $("#verMas").hide();
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
 
               // Al H1 con el id eventosTitle le agrego el título "América del Norte", en este caso
 
@@ -325,39 +331,128 @@
                 ` EN AMÉRICA DEL NORTE`
               )
 
-              // Utilizo filter para que muestre solo los elementos con "America del Norte" del array de objetos
 
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del norte')
+              // Utilizo filter para que muestre solo los elementos con "America del Norte" del array de objetos 
 
-              proxBandas();
-
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del norte'
+                  )
+              
+              filteredEvents(); 
 
               
             })
 
+
+            // De acá al resto de los dropdown, tienen todos exactamente el mismo paso, lo que cambia es el filtro por región
+
             // América del Sur
-            botonAmericaSur.click(function(){
-              console.log("Funciona el boton")
+
+            botonAmericaSur.click(function(e){
+              
+
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN AMÉRICA DEL SUR`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del sur'
+                  )
+              
+              filteredEvents(); 
+
             })
 
             // Europa
-            botonEuropa.click(function(){
-              console.log("Funciona el boton")
+            botonEuropa.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN EUROPA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'europa'
+                  )
+              
+              filteredEvents(); 
             })
 
             // Asia
-            botonAsia.click(function(){
-              console.log("Funciona el boton")
+            botonAsia.click( function(e){
+
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN ASIA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'asia'
+                  )
+              
+              filteredEvents(); 
+
             })
 
             // Africa
-            botonAfrica.click(function(){
-              console.log("Funciona el boton")
+            botonAfrica.click(function(e){
+
+              e.preventDefault();
+              
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN ÁFRICA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'áfrica'
+                  )
+              
+              filteredEvents(); 
+
             })
 
             // Oceania
-            botonOceania.click(function(){
-              console.log("Funciona el boton")
+            botonOceania.click(function(e){
+
+              e.preventDefault();
+
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN OCEANÍA`
+              )
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'oceanía'
+                  )
+              
+              filteredEvents(); 
+
             })
 
           });

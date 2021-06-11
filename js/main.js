@@ -6,8 +6,8 @@ let bandas = [
         imgFile: "img/proximo1.jpg",
         fechaBanda: "30/08/2021",
         nombreBanda: "Red Hot Chili Peppers",
-        lugarBanda: "Geekbar, Nueva York, USA",
-        regionBanda: "América del Norte"
+        lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
+        regionBanda: "oceanía"
 
     },
 
@@ -186,7 +186,7 @@ let bandas = [
 ];
 
 
-// Iteramos las bandas para que se muestren solamente 4, en cada caso se crea una card distinta
+// Iteramos las bandas para que se muestren solamente 4 en la pantalla apenas se inicia
 
 function proxBandas () {
     
@@ -213,6 +213,29 @@ function proxBandas () {
 }
 
 proxBandas();
+
+function filteredEvents () {
+    
+    for (let i = 0; i < bandas.length && i <= 20 ; i++) {
+
+        let crearFiltrados = document.querySelector('#eventosFiltrados');
+    
+        crearFiltrados.innerHTML += `
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="card align-items-center">
+          <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
+          
+          <div class="card-body container row justify-content-center"></div>
+            <h5>${bandas[i].fechaBanda}</h5>
+            <h4 class="card-title">${bandas[i].nombreBanda}</h4>
+            <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
+            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+          </div>
+        </div>
+      </div>`;
+    
+    }
+}
 
 // Creo una variable "displayMore = ver más en ingles". La agarro con elementbyId y le agrego el eventlistener que va a hacer que vaya mostrando el resto de los eventos cada vez que le hago click al boton .
 
@@ -253,14 +276,10 @@ function mostrarBandas() {
 
     if(posicion === 20) {
         // La visibilidad es hidden cuando llega al tope de los elementos (20)
-        document.getElementById('verMas').style.visibility = 'hidden';
+        document.getElementById('verMas').style.display="none";
     } 
     
-    // Si no, sigue en visible para que pueda seguir clickeandose:
 
-    else {
-        document.getElementById('verMas').style.visibility = 'visible';
-    }
 
 }
 
