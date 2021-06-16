@@ -106,6 +106,13 @@
                     <option value="no-binario">No binario</option>
                     <option value="no-decirlo">Prefiero no decirlo</option>
                   </select>
+
+                  <!--DropDown Países-->
+
+                  <select class="form-select" aria-label="Default select example" style="margin-top: 2em;" id="paisesIterados">
+ 
+                  </select>
+                  
     
                   <!--Checkboxes-->
     
@@ -121,6 +128,7 @@
                   <div class="mb-3">
                     <textarea class="form-control" id="exampleFormControlTextarea1" style="resize: none;" rows="3" placeholder="Dejanos tu mensaje!"></textarea>
                   </div>
+
     
                   <!--Enviar formulario-->
     
@@ -232,6 +240,35 @@
 
 
             });
+
+            // ------- API CON PAÍSES DEL MUNDO PARA EL DROPDOWN DE PAÍSES ----------
+
+            // Creo la base URL con la API que voy a consumir en el dropdown
+
+            const baseURL = 'https://api.first.org/data/v1/countries';
+            
+            // Hago el fetch de la API con el base URL
+            fetch(baseURL) 
+            .then(response => response.json() ) 
+            .then (data => {
+              
+                // Creo una variable opciones, que haga un map con los valores del objeto de la API
+                let opciones = Object.values(data.data).map(element =>{
+                    
+                    // Que a su vez retorne un option creado por cada país disponible en el array de la API
+
+                    return ` <option value="${element.country}">${element.country}</option>`
+
+                } )
+
+                // Tomo el ID #paisesIterados y con la funcion html() le itero los valores de opciones. El html() es el equivalente a innerHtml
+
+                $('#paisesIterados').html(opciones);
+
+              })
+            .catch(e => console.log(e));
+
+
 
         </script>
 </body>

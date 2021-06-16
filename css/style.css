@@ -240,6 +240,10 @@ footer div h3 {
   margin: 3.5em 0 3.5em 0;
 }
 
+.hide {
+  display: none;
+}
+
 /* Estilos formulario */
 .inputs-form {
   margin: 2em 0 2em 0;

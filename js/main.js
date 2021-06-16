@@ -218,9 +218,33 @@ function filteredEvents () {
     
     for (let i = 0; i < bandas.length && i <= 20 ; i++) {
 
-        let crearFiltrados = document.querySelector('#eventosFiltrados');
+        let filtradosPorRegion = document.querySelector('#filteredByRegion');
     
-        crearFiltrados.innerHTML += `
+        filtradosPorRegion.innerHTML += `
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="card align-items-center">
+          <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
+          
+          <div class="card-body container row justify-content-center"></div>
+            <h5>${bandas[i].fechaBanda}</h5>
+            <h4 class="card-title">${bandas[i].nombreBanda}</h4>
+            <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
+            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+          </div>
+        </div>
+      </div>`;
+    
+    }
+}
+
+
+function filtradoPorMes () {
+    
+    for (let i = 0; i < bandas.length && i <= 20 ; i++) {
+
+        let filtradosPorFecha = document.querySelector('#filteredByDate');
+    
+        filtradosPorFecha.innerHTML += `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
