@@ -22,6 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
+    <!--FontAwesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
@@ -39,11 +43,13 @@
       <nav class="navegacion-principal navbar navbar fixed-top navbar-expand-lg"> <!--Barra de navegación inicio-->
 
         <div class="container-fluid correccion-width">
-
+            
           <a class="container logo navbar-brand" href="index.html" id="logo"><img src="img/logo.png" clas="container img-fluid" alt="Logo Eventzor" ></a>
           
           <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="background-color: #142664; border-radius: 5px"></span>
+            <span class="navbar-toggler-icon" style="margin-right: 1em;">
+              <i class=" hamburguesa fas fa-bars"></i>
+            </span>
           </button>
 
           <div class="container-fluid collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -116,7 +122,7 @@
       <div class="container">
 
         <form class="d-flex">
-            <input class="barra-busqueda form-control me-2" type="search" placeholder="Encontrá eventos cerca tuyo" aria-label="Search" id="searchBar" >
+            <input class="barra-busqueda form-control me-2" type="search" placeholder="Buscá eventos por nombre de banda o artista" aria-label="Search" id="searchBar" >
             <button class="boton-busqueda btn btn-outline-success" type="submit" id="botonBuscar">Buscar</button>
         </form>
 
@@ -131,7 +137,7 @@
 
       <div class="busqueda container-fluid row justify-content-center">
         
-        <div class="dropdown col-md-4 ">
+        <div class="dropdown col-md-6 ">
           <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             BUSCAR POR MES
           </button>
@@ -151,7 +157,7 @@
           </ul>
         </div>
 
-        <div class="dropdown col-md-4">
+        <div class="dropdown col-md-6">
           <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             BUSCAR POR REGIÓN
           </button>
@@ -165,16 +171,7 @@
           </ul>
         </div>
 
-        <div class="dropdown col-md-4">
-          <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            BUSCAR POR NOMBRE
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
+
 
       </div>
 
@@ -464,8 +461,9 @@
 
             })
 
-            // Reformateo de fechas de Moment
-            var fechas = moment().format('DD/MM/YYYY');
+            
+            
+          
 
             // Dropdowns de eventos por Mes 
 
@@ -475,19 +473,22 @@
             const botonAbril = $('#abril');
             const botonMayo = $('#mayo');
             const botonJunio = $('#junio');
-            const botonJulio = $('#abril');
-            const botonAgosto = $('#mayo');
-            const botonSeptiembre = $('#junio');
-            const botonOctubre = $('#julio');
-            const botonNoviembre = $('#agosto');
-            const botonDiciembre = $('#septiembre');
+            const botonJulio = $('#julio');
+            const botonAgosto = $('#agosto');
+            const botonSeptiembre = $('#septiembre');
+            const botonOctubre = $('#octubre');
+            const botonNoviembre = $('#noviembre');
+            const botonDiciembre = $('#diciembre');
             
             
             // Tomamos el botonEnero, previamente guardado en una variable y le hago el preventDefault
             botonEnero.click(function(e){
+              
+              
               e.preventDefault();
               
               // Estas animaciones igual que en el filtrado por region
+
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
@@ -497,13 +498,256 @@
               )
 
 
-              const enero = moment('01/01/2021').isBetween('31/01/2021');
-              console.log("El boton funciona");
-
-              enero = enero.filter(el => el.fechaBanda.toLowerCase() === 'enero'
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '01'
                   )
-              
+
               filtradoPorMes(); 
+              
+            })
+
+            // El mismo filtro con el resto de los meses, pero varía el valor del toString()
+
+
+            botonFebrero.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN FEBRERO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '02'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonMarzo.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN MARZO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '03'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonAbril.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                ` EN ABRIL`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '04'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonMayo.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                ` EN MAYO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '05'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonJunio.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN JUNIO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '06'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonJulio.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN JULIO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '07'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonAgosto.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN AGOSTO`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '08'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonSeptiembre.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN SEPTIEMBRE`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '09'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonOctubre.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN OCTUBRE`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '10'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonNoviembre.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN NOVIEMBRE`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '11'
+                  )
+
+              filtradoPorMes(); 
+              
+            })
+
+            botonDiciembre.click(function(e){
+              
+              
+              e.preventDefault();
+              
+
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").append(
+                ` EN DICIEMBRE`
+              )
+
+
+              bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '12'
+                  )
+
+              filtradoPorMes(); 
+              
             })
           
       });

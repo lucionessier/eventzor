@@ -4,7 +4,7 @@ let bandas = [
     
     {
         imgFile: "img/proximo1.jpg",
-        fechaBanda: "30/08/2021",
+        fechaBanda: "30/03/2022",
         nombreBanda: "Red Hot Chili Peppers",
         lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
         regionBanda: "oceanía"
@@ -13,7 +13,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo2.jpg",
-        fechaBanda: "31/09/2021",
+        fechaBanda: "04/03/2022",
         nombreBanda: "Coldplay",
         lugarBanda: "CoderBar, Londres, Reino Unido",
         regionBanda: "Europa"
@@ -22,7 +22,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo3.jpg",
-        fechaBanda: "31/10/2021",
+        fechaBanda: "07/04/2022",
         nombreBanda: "Twenty One Pilots",
         lugarBanda: "Ancient Throne, Croacia",
         regionBanda: "Europa"
@@ -31,7 +31,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo4.jpg",
-        fechaBanda: "20/11/2021",
+        fechaBanda: "20/05/2021",
         nombreBanda: "Maroon 5",
         lugarBanda: "Big Bang T. , Sudáfrica",
         regionBanda: "África"
@@ -40,7 +40,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo5.jpg",
-        fechaBanda: "20/10/2021",
+        fechaBanda: "13/05/2022",
         nombreBanda: "AC/DC",
         lugarBanda: "Klusterhoefer , Alemania",
         regionBanda: "Europa"
@@ -49,7 +49,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo6.jpg",
-        fechaBanda: "17/08/2021",
+        fechaBanda: "14/06/2022",
         nombreBanda: "Metallica",
         lugarBanda: "Shinzen, China",
         regionBanda: "Asia"
@@ -58,7 +58,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo7.jpg",
-        fechaBanda: "06/07/2021",
+        fechaBanda: "13/07/2022",
         nombreBanda: "Ed Sheeran",
         lugarBanda: "Huan ze, Vietnam",
         regionBanda: "Asia"
@@ -85,7 +85,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo10.jpg",
-        fechaBanda: "08/11/2021",
+        fechaBanda: "08/08/2021",
         nombreBanda: "Aerosmith",
         lugarBanda: "Nak, Los Angeles, California",
         regionBanda: "América del Norte"
@@ -157,7 +157,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo18.jpg",
-        fechaBanda: "17/10/2021",
+        fechaBanda: "17/01/2022",
         nombreBanda: "Ciro y Los Persas",
         lugarBanda: "El Monumental, Buenos Aires, Argentina",
         regionBanda: "América del Sur"
@@ -166,7 +166,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo19.jpg",
-        fechaBanda: "15/10/2021",
+        fechaBanda: "15/02/2022",
         nombreBanda: "La Mona Jiménez",
         lugarBanda: "La Morocha, Córdoba, Argentina",
         regionBanda: "América del Sur"
@@ -242,7 +242,7 @@ function filtradoPorMes () {
     
     for (let i = 0; i < bandas.length && i <= 20 ; i++) {
 
-        let filtradosPorFecha = document.querySelector('#filteredByDate');
+        let filtradosPorFecha = document.getElementById('filteredByDate');
     
         filtradosPorFecha.innerHTML += `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
