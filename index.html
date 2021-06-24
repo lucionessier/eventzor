@@ -123,7 +123,6 @@
 
         <form class="d-flex">
             <input class="barra-busqueda form-control me-2" type="search" placeholder="Buscá eventos por nombre de banda o artista" aria-label="Search" id="searchBar" >
-            <button class="boton-busqueda btn btn-outline-success" type="submit" id="botonBuscar">Buscar</button>
         </form>
 
         <!--Borrar Luego-->
@@ -191,6 +190,10 @@
           </div>
 
           <div id="filteredByRegion" class="container-fluid row">
+
+          </div>
+
+          <div id="filteredBySearch" class="container-fluid row">
 
           </div>
 
@@ -566,6 +569,7 @@
                 ` EN ABRIL`
               )
 
+              
 
               bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '04'
                   )
@@ -748,6 +752,37 @@
 
               filtradoPorMes(); 
               
+            })
+
+            // --------- SEARCHBAR ---------
+
+            const barraBusqueda = document.getElementById('searchBar');
+
+            barraBusqueda.addEventListener('input', e => {
+              
+              // PreventDefault para que la barra no actúe por default 
+
+              e.preventDefault();
+
+              // Declaro variable que tome el valor de la busqueda de barra de busqueda
+              const busquedaUsuario = e.target.value.toLowerCase();
+
+              // Utilizo un filter que con include tome el valor del target value de la barra
+              
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              const resultadoBusqueda = bandas.filter(bandas => {
+                
+                return bandas.nombreBanda.toLowerCase().includes(busquedaUsuario);
+
+              })
+
+              console.log(busquedaUsuario)
+
+              searchBarFilter(resultadoBusqueda);
+
             })
           
       });

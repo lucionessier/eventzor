@@ -261,6 +261,30 @@ function filtradoPorMes () {
     }
 }
 
+
+function searchBarFilter(resultadoBusqueda) {
+
+    for (let i = 0; i < resultadoBusqueda.length && i <= 20 ; i++) {
+
+        let filtradosBusqueda = document.getElementById('filteredBySearch');
+    
+        filtradosBusqueda.innerHTML = `
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="card align-items-center">
+          <img src="${resultadoBusqueda[i].imgFile}" class="card-img-top" alt="...">
+          
+          <div class="card-body container row justify-content-center"></div>
+            <h5>${resultadoBusqueda[i].fechaBanda}</h5>
+            <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
+            <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
+            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+          </div>
+        </div>
+      </div>`;
+    
+    }
+}
+
 // Creo una variable "displayMore = ver más en ingles". La agarro con elementbyId y le agrego el eventlistener que va a hacer que vaya mostrando el resto de los eventos cada vez que le hago click al boton .
 
 let displayMore = document.getElementById("verMas").addEventListener("click", mostrarBandas);
@@ -312,35 +336,35 @@ function mostrarBandas() {
 
 // Variables para guardar datos de la barra de busqueda en sessionStorage
 
-const barraBusqueda = document.getElementById('searchBar');
-const botonBusqueda = document.getElementById('botonBuscar');
-const form = document.querySelector('form');
-const busquedaUsuario = document.getElementById('valorBusqueda');
+// const barraBusqueda = document.getElementById('searchBar');
+// const botonBusqueda = document.getElementById('botonBuscar');
+// const form = document.querySelector('form');
+// const busquedaUsuario = document.getElementById('valorBusqueda');
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-})
+// form.addEventListener("submit", function(e) {
+//     e.preventDefault();
+// })
 
-// Esta funcion para que escuche el boton de busqueda on click y guarde el valor de la barra de busqueda en session storage, luego cree un h3 al apretar el boton que devuelva con getItem el valor del input de la barra. El console log lo hice para debugear. Cada vez que el usuario haga click en buscar, se va modificando el h3 con la busqueda ingresada 
+// // Esta funcion para que escuche el boton de busqueda on click y guarde el valor de la barra de busqueda en session storage, luego cree un h3 al apretar el boton que devuelva con getItem el valor del input de la barra. El console log lo hice para debugear. Cada vez que el usuario haga click en buscar, se va modificando el h3 con la busqueda ingresada 
 
-botonBusqueda.addEventListener('click',function(){
-    sessionStorage.setItem('busqueda',barraBusqueda.value);
+// botonBusqueda.addEventListener('click',function(){
+//     sessionStorage.setItem('busqueda',barraBusqueda.value);
 
-    busquedaUsuario.innerHTML = `<h3 style="text-align:center; visibility: visible">La busqueda ingresada es ${sessionStorage.getItem('busqueda',barraBusqueda.value)}</h3> `
+//     busquedaUsuario.innerHTML = `<h3 style="text-align:center; visibility: visible">La busqueda ingresada es ${sessionStorage.getItem('busqueda',barraBusqueda.value)}</h3> `
     
-    console.log(sessionStorage.getItem('busqueda',barraBusqueda.value));
-})
+//     console.log(sessionStorage.getItem('busqueda',barraBusqueda.value));
+// })
 
 
-// En localStorage lo que quiero hacer es guardar el array de las bandas
+// // En localStorage lo que quiero hacer es guardar el array de las bandas
 
-const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) }
+// const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) }
 
-for (const banda of bandas) {
-    guardarLocal(banda.nombreBanda, JSON.stringify(banda));
-}
+// for (const banda of bandas) {
+//     guardarLocal(banda.nombreBanda, JSON.stringify(banda));
+// }
 
-// Almaceno el listado de bandas para que cuando el usuario loguee nuevamente estén guardados los valores
-guardarLocal("infoBandas", JSON.stringify(bandas));
+// // Almaceno el listado de bandas para que cuando el usuario loguee nuevamente estén guardados los valores
+// guardarLocal("infoBandas", JSON.stringify(bandas));
 
 
