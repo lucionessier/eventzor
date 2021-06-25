@@ -4,6 +4,7 @@ let bandas = [
     
     {
         imgFile: "img/proximo1.jpg",
+        preciobanda: 75,
         fechaBanda: "30/03/2022",
         nombreBanda: "Red Hot Chili Peppers",
         lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
@@ -13,6 +14,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo2.jpg",
+        preciobanda: 100,
         fechaBanda: "04/03/2022",
         nombreBanda: "Coldplay",
         lugarBanda: "CoderBar, Londres, Reino Unido",
@@ -22,6 +24,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo3.jpg",
+        preciobanda: 80,
         fechaBanda: "07/04/2022",
         nombreBanda: "Twenty One Pilots",
         lugarBanda: "Ancient Throne, Croacia",
@@ -31,6 +34,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo4.jpg",
+        preciobanda: 75,
         fechaBanda: "20/05/2021",
         nombreBanda: "Maroon 5",
         lugarBanda: "Big Bang T. , Sudáfrica",
@@ -40,6 +44,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo5.jpg",
+        preciobanda: 110,
         fechaBanda: "13/05/2022",
         nombreBanda: "AC/DC",
         lugarBanda: "Klusterhoefer , Alemania",
@@ -49,6 +54,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo6.jpg",
+        preciobanda: 110,
         fechaBanda: "14/06/2022",
         nombreBanda: "Metallica",
         lugarBanda: "Shinzen, China",
@@ -58,6 +64,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo7.jpg",
+        preciobanda: 50,
         fechaBanda: "13/07/2022",
         nombreBanda: "Ed Sheeran",
         lugarBanda: "Huan ze, Vietnam",
@@ -67,6 +74,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo8.jpg",
+        preciobanda: 35,
         fechaBanda: "09/12/2021",
         nombreBanda: "The Lumineers",
         lugarBanda: "Trip se, Polonia",
@@ -76,6 +84,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo9.jpg",
+        preciobanda: 75,
         fechaBanda: "08/09/2021",
         nombreBanda: "Linkin Park",
         lugarBanda: "The Noods, Londres, Reino Unido",
@@ -85,6 +94,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo10.jpg",
+        preciobanda: 110,
         fechaBanda: "08/08/2021",
         nombreBanda: "Aerosmith",
         lugarBanda: "Nak, Los Angeles, California",
@@ -94,6 +104,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo11.jpg",
+        preciobanda: 65,
         fechaBanda: "08/10/2021",
         nombreBanda: "Post Malone",
         lugarBanda: "Stripped, Los Angeles, California",
@@ -103,6 +114,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo12.jpg",
+        preciobanda: 35,
         fechaBanda: "14/11/2021",
         nombreBanda: "J Balvin",
         lugarBanda: "NLa Guachita, Bogotá, Colombia",
@@ -112,6 +124,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo13.jpg",
+        preciobanda: 25,
         fechaBanda: "10/10/2021",
         nombreBanda: "Cazzu",
         lugarBanda: "Milk, Córdoba, Argentina",
@@ -121,6 +134,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo14.jpg",
+        preciobanda: 100,
         fechaBanda: "27/11/2021",
         nombreBanda: "Solomun",
         lugarBanda: "Tuk Tuk, Tulum, México",
@@ -130,6 +144,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo15.jpg",
+        preciobanda: 90,
         fechaBanda: "28/11/2021",
         nombreBanda: "Maceo Plex",
         lugarBanda: "DGTL Festival, Países Bajos",
@@ -139,6 +154,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo16.jpg",
+        preciobanda: 150,
         fechaBanda: "28/11/2021",
         nombreBanda: "Soda Stereo",
         lugarBanda: "Estadio Único La Plata, Buenos Aires, Argentina",
@@ -148,6 +164,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo17.jpg",
+        preciobanda: 35,
         fechaBanda: "25/12/2021",
         nombreBanda: "Babasónicos",
         lugarBanda: "Studio Theater, Córdoba, Argentina",
@@ -157,6 +174,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo18.jpg",
+        preciobanda: 15,
         fechaBanda: "17/01/2022",
         nombreBanda: "Ciro y Los Persas",
         lugarBanda: "El Monumental, Buenos Aires, Argentina",
@@ -166,6 +184,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo19.jpg",
+        preciobanda: 10,
         fechaBanda: "15/02/2022",
         nombreBanda: "La Mona Jiménez",
         lugarBanda: "La Morocha, Córdoba, Argentina",
@@ -175,6 +194,7 @@ let bandas = [
 
     {
         imgFile: "img/proximo20.jpg",
+        preciobanda: 5,
         fechaBanda: "13/09/2021",
         nombreBanda: "La Barra",
         lugarBanda: "Cuba Inc, Córdoba, Argentina",
@@ -200,6 +220,7 @@ function proxBandas () {
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
           <div class="card-body container row justify-content-center"></div>
+            <h2>$${bandas[i].preciobanda}</h2>
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
@@ -226,6 +247,7 @@ function filteredEvents () {
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
           <div class="card-body container row justify-content-center"></div>
+            <h2>$${bandas[i].preciobanda}</h2>
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
@@ -250,6 +272,7 @@ function filtradoPorMes () {
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
           <div class="card-body container row justify-content-center"></div>
+            <h2>$${bandas[i].preciobanda}</h2>
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
@@ -264,6 +287,7 @@ function filtradoPorMes () {
 
 function searchBarFilter(resultadoBusqueda) {
 
+
     for (let i = 0; i < resultadoBusqueda.length && i <= 20 ; i++) {
 
         let filtradosBusqueda = document.getElementById('filteredBySearch');
@@ -274,6 +298,7 @@ function searchBarFilter(resultadoBusqueda) {
           <img src="${resultadoBusqueda[i].imgFile}" class="card-img-top" alt="...">
           
           <div class="card-body container row justify-content-center"></div>
+            <h2>$${resultadoBusqueda[i].preciobanda}</h2>
             <h5>${resultadoBusqueda[i].fechaBanda}</h5>
             <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
             <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
@@ -306,6 +331,8 @@ function mostrarBandas() {
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
           <div class="card-body container row justify-content-center"></div>
+          
+            <h2>$${bandas[i].preciobanda}</h2>
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
