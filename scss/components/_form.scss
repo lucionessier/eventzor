@@ -15,6 +15,21 @@
 
 }
 
+.inputs-checkout {
+    margin: 1em 0 0.5em 0;
+    border-radius: 20px;
+    font-family: $cuerpo;
+
+    &:hover {
+        border-color: $color-principal;
+    }
+
+    &:focus {
+        border-color: $color-terciario;
+    }
+
+}
+
 select,textarea {
     
         font-family: $cuerpo;
@@ -30,7 +45,7 @@ select,textarea {
 }
 
 .section-margin {
-    margin: 5em 0 4em 0;
+    margin: 7em 0 4em 0;
 }
 
 .form-check-input:checked {

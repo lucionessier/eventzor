@@ -62,3 +62,24 @@
         font-weight: bold;
     }
 }
+
+
+// Estilos Scrollbar 
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid $color-principal;
+    border-radius: 1rem;
+    background-color: $color-principal;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}

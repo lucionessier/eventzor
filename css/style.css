@@ -144,6 +144,24 @@ h5 {
   font-weight: bold;
 }
 
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #ff2e93;
+  border-radius: 1rem;
+  background-color: #ff2e93;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
 /* Estilos barra de navegación */
 nav.navegacion-principal {
   padding: 5px;
@@ -255,6 +273,18 @@ footer div h3 {
   display: none;
 }
 
+.parallax {
+  /* Imagen de fondo */
+  background-image: url("/img/fondoevento-01.svg");
+  /* Altura mínima */
+  height: 1800px;
+  /* Efecto parallax de fondo */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Estilos formulario */
 .inputs-form {
   margin: 2em 0 2em 0;
@@ -265,6 +295,18 @@ footer div h3 {
   border-color: #ff2e93;
 }
 .inputs-form:focus {
+  border-color: #142664;
+}
+
+.inputs-checkout {
+  margin: 1em 0 0.5em 0;
+  border-radius: 20px;
+  font-family: "Fira Sans", sans-serif;
+}
+.inputs-checkout:hover {
+  border-color: #ff2e93;
+}
+.inputs-checkout:focus {
   border-color: #142664;
 }
 
@@ -280,7 +322,7 @@ select:focus, textarea:focus {
 }
 
 .section-margin {
-  margin: 5em 0 4em 0;
+  margin: 7em 0 4em 0;
 }
 
 .form-check-input:checked {
