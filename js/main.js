@@ -3,8 +3,10 @@
 let bandas = [
     
     {
+        id: "redhotchilipeppers",
         imgFile: "img/proximo1.jpg",
         preciobanda: 75,
+        preciobandavip: 110,
         fechaBanda: "30/03/2022",
         nombreBanda: "Red Hot Chili Peppers",
         lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
@@ -13,8 +15,10 @@ let bandas = [
     },
 
     {
+        id: "coldplay",
         imgFile: "img/proximo2.jpg",
         preciobanda: 100,
+        preciobandavip: 130,
         fechaBanda: "04/03/2022",
         nombreBanda: "Coldplay",
         lugarBanda: "CoderBar, Londres, Reino Unido",
@@ -23,8 +27,10 @@ let bandas = [
     },
 
     {
+        id: "twentyonepilots",
         imgFile: "img/proximo3.jpg",
         preciobanda: 80,
+        preciobandavip: 110,
         fechaBanda: "07/04/2022",
         nombreBanda: "Twenty One Pilots",
         lugarBanda: "Ancient Throne, Croacia",
@@ -33,8 +39,10 @@ let bandas = [
     },
 
     {
+        id: "maroonfive",
         imgFile: "img/proximo4.jpg",
         preciobanda: 75,
+        preciobandavip: 90,
         fechaBanda: "20/05/2021",
         nombreBanda: "Maroon 5",
         lugarBanda: "Big Bang T. , Sudáfrica",
@@ -43,8 +51,10 @@ let bandas = [
     },
 
     {
+        id: "acdc",
         imgFile: "img/proximo5.jpg",
         preciobanda: 110,
+        preciobandavip: 135,
         fechaBanda: "13/05/2022",
         nombreBanda: "AC/DC",
         lugarBanda: "Klusterhoefer , Alemania",
@@ -53,8 +63,10 @@ let bandas = [
     },
 
     {
+        id: "metallica",
         imgFile: "img/proximo6.jpg",
         preciobanda: 110,
+        preciobandavip: 125,
         fechaBanda: "14/06/2022",
         nombreBanda: "Metallica",
         lugarBanda: "Shinzen, China",
@@ -63,8 +75,10 @@ let bandas = [
     },
 
     {
+        id: "edsheeran",
         imgFile: "img/proximo7.jpg",
         preciobanda: 50,
+        preciobandavip: 70,
         fechaBanda: "13/07/2022",
         nombreBanda: "Ed Sheeran",
         lugarBanda: "Huan ze, Vietnam",
@@ -73,8 +87,10 @@ let bandas = [
     },
 
     {
+        id: "thelumineers",
         imgFile: "img/proximo8.jpg",
         preciobanda: 35,
+        preciobandavip: 125,
         fechaBanda: "09/12/2021",
         nombreBanda: "The Lumineers",
         lugarBanda: "Trip se, Polonia",
@@ -83,8 +99,10 @@ let bandas = [
     },
 
     {
+        id: "linkinpark",
         imgFile: "img/proximo9.jpg",
         preciobanda: 75,
+        preciobandavip: 110,
         fechaBanda: "08/09/2021",
         nombreBanda: "Linkin Park",
         lugarBanda: "The Noods, Londres, Reino Unido",
@@ -93,8 +111,10 @@ let bandas = [
     },
 
     {
+        id: "aerosmith",
         imgFile: "img/proximo10.jpg",
         preciobanda: 110,
+        preciobandavip: 135,
         fechaBanda: "08/08/2021",
         nombreBanda: "Aerosmith",
         lugarBanda: "Nak, Los Angeles, California",
@@ -103,8 +123,10 @@ let bandas = [
     },
 
     {
+        id: "postmalone",
         imgFile: "img/proximo11.jpg",
         preciobanda: 65,
+        preciobandavip: 110,
         fechaBanda: "08/10/2021",
         nombreBanda: "Post Malone",
         lugarBanda: "Stripped, Los Angeles, California",
@@ -113,8 +135,10 @@ let bandas = [
     },
 
     {
+        id: "jbalvin",
         imgFile: "img/proximo12.jpg",
         preciobanda: 35,
+        preciobandavip: 60,
         fechaBanda: "14/11/2021",
         nombreBanda: "J Balvin",
         lugarBanda: "NLa Guachita, Bogotá, Colombia",
@@ -123,8 +147,10 @@ let bandas = [
     },
 
     {
+        id: "cazzu",
         imgFile: "img/proximo13.jpg",
         preciobanda: 25,
+        preciobandavip: 45,
         fechaBanda: "10/10/2021",
         nombreBanda: "Cazzu",
         lugarBanda: "Milk, Córdoba, Argentina",
@@ -133,8 +159,10 @@ let bandas = [
     },
 
     {
+        id: "solomun",
         imgFile: "img/proximo14.jpg",
         preciobanda: 100,
+        preciobandavip: 130,
         fechaBanda: "27/11/2021",
         nombreBanda: "Solomun",
         lugarBanda: "Tuk Tuk, Tulum, México",
@@ -143,8 +171,10 @@ let bandas = [
     },
 
     {
+        id: "maceoplex",
         imgFile: "img/proximo15.jpg",
         preciobanda: 90,
+        preciobandavip: 110,
         fechaBanda: "28/11/2021",
         nombreBanda: "Maceo Plex",
         lugarBanda: "DGTL Festival, Países Bajos",
@@ -153,8 +183,10 @@ let bandas = [
     },
 
     {
+        id: "sodastereo",
         imgFile: "img/proximo16.jpg",
         preciobanda: 150,
+        preciobandavip: 175,
         fechaBanda: "28/11/2021",
         nombreBanda: "Soda Stereo",
         lugarBanda: "Estadio Único La Plata, Buenos Aires, Argentina",
@@ -163,8 +195,10 @@ let bandas = [
     },
 
     {
+        id: "babasonicos",
         imgFile: "img/proximo17.jpg",
         preciobanda: 35,
+        preciobandavip: 60,
         fechaBanda: "25/12/2021",
         nombreBanda: "Babasónicos",
         lugarBanda: "Studio Theater, Córdoba, Argentina",
@@ -173,8 +207,10 @@ let bandas = [
     },
 
     {
+        id: "ciroylospersas",
         imgFile: "img/proximo18.jpg",
         preciobanda: 15,
+        preciobandavip: 25,
         fechaBanda: "17/01/2022",
         nombreBanda: "Ciro y Los Persas",
         lugarBanda: "El Monumental, Buenos Aires, Argentina",
@@ -183,8 +219,10 @@ let bandas = [
     },
 
     {
+        id: "lamonajimenez",
         imgFile: "img/proximo19.jpg",
         preciobanda: 10,
+        preciobandavip: 25,
         fechaBanda: "15/02/2022",
         nombreBanda: "La Mona Jiménez",
         lugarBanda: "La Morocha, Córdoba, Argentina",
@@ -193,8 +231,10 @@ let bandas = [
     },
 
     {
+        id: "labarra",
         imgFile: "img/proximo20.jpg",
         preciobanda: 5,
+        preciobandavip: 10,
         fechaBanda: "13/09/2021",
         nombreBanda: "La Barra",
         lugarBanda: "Cuba Inc, Córdoba, Argentina",
