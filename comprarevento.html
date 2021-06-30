@@ -73,12 +73,74 @@
       
           </header>
 
+          
+          <!-- Button trigger modal -->
 
-          <div class="parallax container-fluid align-content-center align-items-center">
 
-            <h2>El evento ya casi es tuyo!</h2>
+          <div class="container-margin" style="margin-top: 10em;"></div>
 
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nombre Banda</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                          
+                  <!--Contenido del modal-->
+
+                  <div class="container-fluid row justify-content-center align-content-center">
+                    
+                    <div class="container">
+                      <img src="img/proximo1.jpg" alt="" class="img-fluid" style="border-radius: 20px;">
+                    </div>
+                    
+                    <i class="icons far fa-calendar-alt"></i> <p class="display-p">Fecha:</p>
+
+                    <i class="icons fas fa-map-marker-alt"></i> <p class="display-p">Lugar:</p>
+
+                    <i class="icons fas fa-ticket-alt"></i><p class="display-p">Entrada General: $40</p> 
+                            
+                    <div class="dropdown">
+                      <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        0
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" >1</a></li>
+                        </ul>
+                    </div>
+                    
+                    <i class="icons fas fa-star"></i><p class="display-p">Entrada VIP: $60</p>
+
+                    <div class="dropdown">
+                      <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        0
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" >1</a></li>
+                        </ul>
+                    </div>
+
+                  </div>
+
+
+                </div>
+                <div class="modal-footer row container-fluid justify-content-center">
+                  
+                  <button type="button" class="boton btn btn-primary" style="width: 50%;">Confirmar compra</button>
+                  
+                  <button type="button" class="volver btn btn-secondary" data-bs-dismiss="modal" style="width: 50%;">Volver</button>
+
+                </div>
+              </div>
+            </div>
           </div>
+
 
     
         <!--Footer INICIO-->

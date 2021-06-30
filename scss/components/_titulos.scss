@@ -35,3 +35,18 @@ h5 {
     font-style: italic;
     text-align: center;
 }
+
+.display-p {
+    color: $color-terciario;
+    font-family: $cuerpo;
+    font-style: italic;
+    font-size: 1.3em;
+    // display: inline;
+}
+
+.display-span {
+    color: white;
+    background-color: $color-secundario;
+    padding: 10px;
+    border-radius: 20px;
+}
