@@ -264,7 +264,9 @@ function proxBandas () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            Comprar tickets
+            </button>
           </div>
         </div>
       </div>`;
@@ -291,7 +293,9 @@ function filteredEvents () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            Comprar tickets
+            </button>
           </div>
         </div>
       </div>`;
@@ -316,7 +320,9 @@ function filtradoPorMes () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            Comprar tickets
+            </button>
           </div>
         </div>
       </div>`;
@@ -342,7 +348,9 @@ function searchBarFilter(resultadoBusqueda) {
             <h5>${resultadoBusqueda[i].fechaBanda}</h5>
             <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
             <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
-            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            Comprar tickets
+            </button>
           </div>
         </div>
       </div>`;
@@ -376,7 +384,9 @@ function mostrarBandas() {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <a href="#" class="d-flex boton-proximos-eventos btn btn-primary justify-content-center align-content-center" style="margin-bottom:1em;">Comprar Tickets</a>
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            Comprar tickets
+            </button>
           </div>
         </div>
       </div>`;
@@ -397,6 +407,8 @@ function mostrarBandas() {
 
 
 }
+
+
 
 
 // ------------------  SESSION/LOCAL STORAGE ---------------
