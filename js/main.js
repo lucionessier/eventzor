@@ -255,7 +255,7 @@ function proxBandas () {
         let crearCard = document.querySelector('#proximosEventos');
     
         crearCard.innerHTML += `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
@@ -277,6 +277,8 @@ function proxBandas () {
 
 proxBandas();
 
+
+
 function filteredEvents () {
     
     for (let i = 0; i < bandas.length && i <= 20 ; i++) {
@@ -284,7 +286,7 @@ function filteredEvents () {
         let filtradosPorRegion = document.querySelector('#filteredByRegion');
     
         filtradosPorRegion.innerHTML += `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
@@ -311,7 +313,7 @@ function filtradoPorMes () {
         let filtradosPorFecha = document.getElementById('filteredByDate');
     
         filtradosPorFecha.innerHTML += `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
@@ -339,7 +341,7 @@ function searchBarFilter(resultadoBusqueda) {
         let filtradosBusqueda = document.getElementById('filteredBySearch');
     
         filtradosBusqueda.innerHTML = `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${resultadoBusqueda[i].id}">
         <div class="card align-items-center">
           <img src="${resultadoBusqueda[i].imgFile}" class="card-img-top" alt="...">
           
@@ -374,7 +376,7 @@ function mostrarBandas() {
         let crearCard = document.querySelector('#proximosEventos');
     
         crearCard.innerHTML += `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
