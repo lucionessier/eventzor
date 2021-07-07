@@ -18,6 +18,24 @@
     }
 }
 
+.botonCompra {
+    background-color: $color-principal;
+    border-radius: 20px;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $color-terciario;
+        border-radius: 20px;
+        color: white;
+        border-color: transparent;
+        font-weight: bold;
+        box-shadow: 5px 5px 5px #b9b9b9;
+    }
+}
+
 .boton-busqueda {
     background-color: $color-secundario;
     border-radius: 20px;

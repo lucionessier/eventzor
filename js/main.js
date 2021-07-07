@@ -10,7 +10,9 @@ let bandas = [
         fechaBanda: "30/03/2022",
         nombreBanda: "Red Hot Chili Peppers",
         lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
-        regionBanda: "oceanía"
+        regionBanda: "oceanía",
+        botonid: "rhcp",
+        modalid: 1
 
     },
 
@@ -22,7 +24,9 @@ let bandas = [
         fechaBanda: "04/03/2022",
         nombreBanda: "Coldplay",
         lugarBanda: "CoderBar, Londres, Reino Unido",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "cdp",
+        modalid: 2
 
     },
 
@@ -34,7 +38,9 @@ let bandas = [
         fechaBanda: "07/04/2022",
         nombreBanda: "Twenty One Pilots",
         lugarBanda: "Ancient Throne, Croacia",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "twop",
+        modalid: 3
 
     },
 
@@ -46,7 +52,9 @@ let bandas = [
         fechaBanda: "20/05/2021",
         nombreBanda: "Maroon 5",
         lugarBanda: "Big Bang T. , Sudáfrica",
-        regionBanda: "África"
+        regionBanda: "África",
+        botonid: "mfive",
+        modalid: 4
 
     },
 
@@ -58,7 +66,9 @@ let bandas = [
         fechaBanda: "13/05/2022",
         nombreBanda: "AC/DC",
         lugarBanda: "Klusterhoefer , Alemania",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "acdcbtn",
+        modalid: 5
 
     },
 
@@ -70,7 +80,9 @@ let bandas = [
         fechaBanda: "14/06/2022",
         nombreBanda: "Metallica",
         lugarBanda: "Shinzen, China",
-        regionBanda: "Asia"
+        regionBanda: "Asia",
+        botonid: "mtc",
+        modalid: 6
 
     },
 
@@ -82,7 +94,9 @@ let bandas = [
         fechaBanda: "13/07/2022",
         nombreBanda: "Ed Sheeran",
         lugarBanda: "Huan ze, Vietnam",
-        regionBanda: "Asia"
+        regionBanda: "Asia",
+        botonid: "edsn",
+        modalid: 7
 
     },
 
@@ -94,7 +108,9 @@ let bandas = [
         fechaBanda: "09/12/2021",
         nombreBanda: "The Lumineers",
         lugarBanda: "Trip se, Polonia",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "tlm",
+        modalid: 8
 
     },
 
@@ -106,7 +122,9 @@ let bandas = [
         fechaBanda: "08/09/2021",
         nombreBanda: "Linkin Park",
         lugarBanda: "The Noods, Londres, Reino Unido",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "lp",
+        modalid: 9
 
     },
 
@@ -118,7 +136,9 @@ let bandas = [
         fechaBanda: "08/08/2021",
         nombreBanda: "Aerosmith",
         lugarBanda: "Nak, Los Angeles, California",
-        regionBanda: "América del Norte"
+        regionBanda: "América del Norte",
+        botonid: "asm",
+        modalid: 10
 
     },
 
@@ -130,7 +150,9 @@ let bandas = [
         fechaBanda: "08/10/2021",
         nombreBanda: "Post Malone",
         lugarBanda: "Stripped, Los Angeles, California",
-        regionBanda: "América del Norte"
+        regionBanda: "América del Norte",
+        botonid: "pm",
+        modalid: 11
 
     },
 
@@ -142,7 +164,9 @@ let bandas = [
         fechaBanda: "14/11/2021",
         nombreBanda: "J Balvin",
         lugarBanda: "NLa Guachita, Bogotá, Colombia",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "jbn",
+        modalid: 12
 
     },
 
@@ -154,7 +178,9 @@ let bandas = [
         fechaBanda: "10/10/2021",
         nombreBanda: "Cazzu",
         lugarBanda: "Milk, Córdoba, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "caz",
+        modalid: 13
 
     },
 
@@ -166,7 +192,9 @@ let bandas = [
         fechaBanda: "27/11/2021",
         nombreBanda: "Solomun",
         lugarBanda: "Tuk Tuk, Tulum, México",
-        regionBanda: "América del Norte"
+        regionBanda: "América del Norte",
+        botonid: "smn",
+        modalid: 14
 
     },
 
@@ -178,7 +206,9 @@ let bandas = [
         fechaBanda: "28/11/2021",
         nombreBanda: "Maceo Plex",
         lugarBanda: "DGTL Festival, Países Bajos",
-        regionBanda: "Europa"
+        regionBanda: "Europa",
+        botonid: "mcp",
+        modalid: 15
 
     },
 
@@ -190,7 +220,9 @@ let bandas = [
         fechaBanda: "28/11/2021",
         nombreBanda: "Soda Stereo",
         lugarBanda: "Estadio Único La Plata, Buenos Aires, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "sods",
+        modalid: 16
 
     },
 
@@ -202,7 +234,9 @@ let bandas = [
         fechaBanda: "25/12/2021",
         nombreBanda: "Babasónicos",
         lugarBanda: "Studio Theater, Córdoba, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "bbsn",
+        modalid: 17
 
     },
 
@@ -214,7 +248,9 @@ let bandas = [
         fechaBanda: "17/01/2022",
         nombreBanda: "Ciro y Los Persas",
         lugarBanda: "El Monumental, Buenos Aires, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "cylp",
+        modalid: 18
 
     },
 
@@ -226,7 +262,9 @@ let bandas = [
         fechaBanda: "15/02/2022",
         nombreBanda: "La Mona Jiménez",
         lugarBanda: "La Morocha, Córdoba, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "lmj",
+        modalid: 19
 
     },
 
@@ -238,7 +276,9 @@ let bandas = [
         fechaBanda: "13/09/2021",
         nombreBanda: "La Barra",
         lugarBanda: "Cuba Inc, Córdoba, Argentina",
-        regionBanda: "América del Sur"
+        regionBanda: "América del Sur",
+        botonid: "lb",
+        modalid: 20
 
     },
     
@@ -264,7 +304,7 @@ function proxBandas () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${i}">
             Comprar tickets
             </button>
           </div>
@@ -295,7 +335,7 @@ function filteredEvents () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
             Comprar tickets
             </button>
           </div>
@@ -322,7 +362,7 @@ function filtradoPorMes () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
             Comprar tickets
             </button>
           </div>
@@ -332,6 +372,104 @@ function filtradoPorMes () {
     }
 }
 
+// Edicion dinámica del contenido de modal
+
+var elements = document.getElementsByClassName('botonCompra');
+
+
+
+var myFunction = function(e) {
+  console.log(e.target.id);
+  
+  let modal = document.getElementById('modalBanda');
+  modal.innerHTML = `
+  
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="modalBandaLabel">${bandas[e.target.id].nombreBanda}</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                            
+                    <!--Contenido del modal-->
+  
+                    <div class="container-fluid row justify-content-center align-content-center">
+                      
+                      <div class="container">
+                        <img src="${bandas[e.target.id].imgFile}" alt="" class="img-fluid" style="border-radius: 20px;">
+                      </div>
+                      
+                      <div class="container-fluid" style="margin-top:1em;">
+                        
+                        <div class="container-fluid">
+                          <i class="icons far fa-calendar-alt"></i> <p class="display-p">Fecha: ${bandas[e.target.id].fechaBanda}</p>
+                        </div>
+  
+                        <div class="container-fluid">
+                          <i class="icons fas fa-map-marker-alt"></i> <p class="display-p">Lugar: ${bandas[e.target.id].lugarBanda}</p>
+                        </div>
+  
+                      </div>
+  
+                      <div class="container-fluid">
+                        <i class="icons fas fa-ticket-alt"></i><p class="display-p"> Entrada General: <span class="display-span">$${bandas[e.target.id].preciobanda}</span></p> 
+                      </div>
+  
+                              
+                      <div class="dropdown">
+                        <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          0
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#" >1</a></li>
+                          </ul>
+                      </div>
+                      
+                      <div class="container-fluid">
+                        <i class="icons fas fa-star"></i><p class="display-p"> Entrada VIP: <span class="display-span">$60</span></p>
+                      </div>
+  
+  
+                      <div class="dropdown">
+                        <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          0
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#" >1</a></li>
+                          </ul>
+                      </div>
+  
+                      <div class="container-fluid" style="margin-top: 2em;">
+                        <h3 style="font-weight: bold;">Total a pagar: $ 54654</h3>
+                      </div>
+  
+                    </div>
+  
+  
+                  </div>
+                  <div class="modal-footer row container-fluid justify-content-center">
+                    
+                    <a href="checkout.html" class="d-flex boton btn btn-primary justify-content-center align-content-center" style="width: 50%;">Confirmar compra</a>
+                    
+                    <button type="button" class="volver btn btn-secondary" data-bs-dismiss="modal" style="width: 50%;">Volver</button>
+  
+  
+  
+                  </div>
+                </div>
+             
+  
+  `
+
+};
+
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener('click', myFunction, false);
+}
+
+
+// Filtro de searchbar por busqueda
 
 function searchBarFilter(resultadoBusqueda) {
 
@@ -350,7 +488,7 @@ function searchBarFilter(resultadoBusqueda) {
             <h5>${resultadoBusqueda[i].fechaBanda}</h5>
             <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
             <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${resultadoBusqueda[i].botonid}">
             Comprar tickets
             </button>
           </div>
@@ -359,6 +497,8 @@ function searchBarFilter(resultadoBusqueda) {
     
     }
 }
+
+
 
 // Creo una variable "displayMore = ver más en ingles". La agarro con elementbyId y le agrego el eventlistener que va a hacer que vaya mostrando el resto de los eventos cada vez que le hago click al boton .
 
@@ -386,7 +526,7 @@ function mostrarBandas() {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;">
+            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
             Comprar tickets
             </button>
           </div>
