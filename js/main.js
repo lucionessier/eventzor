@@ -335,7 +335,7 @@ function filteredEvents () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${i}">
             Comprar tickets
             </button>
           </div>
@@ -343,6 +343,8 @@ function filteredEvents () {
       </div>`;
     
     }
+
+    editarModal();
 }
 
 
@@ -362,7 +364,7 @@ function filtradoPorMes () {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${i}">
             Comprar tickets
             </button>
           </div>
@@ -370,103 +372,112 @@ function filtradoPorMes () {
       </div>`;
     
     }
+
+    editarModal();
 }
 
 // Edicion dinámica del contenido de modal
 
-var elements = document.getElementsByClassName('botonCompra');
+
+function editarModal() {
+    var elements = document.getElementsByClassName('botonCompra');
 
 
 
-var myFunction = function(e) {
-  console.log(e.target.id);
-  
-  let modal = document.getElementById('modalBanda');
-  modal.innerHTML = `
-  
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h2 class="modal-title" id="modalBandaLabel">${bandas[e.target.id].nombreBanda}</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                            
-                    <!--Contenido del modal-->
-  
-                    <div class="container-fluid row justify-content-center align-content-center">
-                      
-                      <div class="container">
-                        <img src="${bandas[e.target.id].imgFile}" alt="" class="img-fluid" style="border-radius: 20px;">
-                      </div>
-                      
-                      <div class="container-fluid" style="margin-top:1em;">
+
+    var myFunction = function(e) {
+    console.log(e.target.id);
+    
+    let modal = document.getElementById('modalBanda');
+    modal.innerHTML = `
+    
+                  <div class="modal-content" style="width:50%">
+                    <div class="modal-header">
+                      <h2 class="modal-title" id="modalBandaLabel">${bandas[e.target.id].nombreBanda}</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                              
+                      <!--Contenido del modal-->
+    
+                      <div class="container-fluid row justify-content-center align-content-center">
+                        
+                        <div class="container">
+                          <img src="${bandas[e.target.id].imgFile}" alt="" class="img-fluid" style="border-radius: 20px;">
+                        </div>
+                        
+                        <div class="container-fluid" style="margin-top:1em;">
+                          
+                          <div class="container-fluid">
+                            <i class="icons far fa-calendar-alt"></i> <p class="display-p">Fecha: ${bandas[e.target.id].fechaBanda}</p>
+                          </div>
+    
+                          <div class="container-fluid">
+                            <i class="icons fas fa-map-marker-alt"></i> <p class="display-p">Lugar: ${bandas[e.target.id].lugarBanda}</p>
+                          </div>
+    
+                        </div>
+    
+                        <div class="container-fluid">
+                          <i class="icons fas fa-ticket-alt"></i><p class="display-p"> Entrada General: <span class="display-span">$${bandas[e.target.id].preciobanda}</span></p> 
+                        </div>
+    
+                                
+                        <div class="dropdown">
+                          <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            0
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" >1</a></li>
+                            </ul>
+                        </div>
                         
                         <div class="container-fluid">
-                          <i class="icons far fa-calendar-alt"></i> <p class="display-p">Fecha: ${bandas[e.target.id].fechaBanda}</p>
+                          <i class="icons fas fa-star"></i><p class="display-p"> Entrada VIP: <span class="display-span">$${bandas[e.target.id].preciobandavip}</span></p>
                         </div>
-  
-                        <div class="container-fluid">
-                          <i class="icons fas fa-map-marker-alt"></i> <p class="display-p">Lugar: ${bandas[e.target.id].lugarBanda}</p>
+    
+    
+                        <div class="dropdown">
+                          <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            0
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" >1</a></li>
+                            </ul>
                         </div>
-  
+    
+                        <div class="container-fluid" style="margin-top: 2em;">
+                          <h3 style="font-weight: bold;">Total a pagar: $ 54654</h3>
+                        </div>
+    
                       </div>
-  
-                      <div class="container-fluid">
-                        <i class="icons fas fa-ticket-alt"></i><p class="display-p"> Entrada General: <span class="display-span">$${bandas[e.target.id].preciobanda}</span></p> 
-                      </div>
-  
-                              
-                      <div class="dropdown">
-                        <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          0
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#" >1</a></li>
-                          </ul>
-                      </div>
-                      
-                      <div class="container-fluid">
-                        <i class="icons fas fa-star"></i><p class="display-p"> Entrada VIP: <span class="display-span">$60</span></p>
-                      </div>
-  
-  
-                      <div class="dropdown">
-                        <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          0
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#" >1</a></li>
-                          </ul>
-                      </div>
-  
-                      <div class="container-fluid" style="margin-top: 2em;">
-                        <h3 style="font-weight: bold;">Total a pagar: $ 54654</h3>
-                      </div>
-  
+    
+    
                     </div>
-  
-  
+                    <div class="modal-footer row container-fluid justify-content-center">
+                      
+                      <a href="checkout.html" class="d-flex boton btn btn-primary justify-content-center align-content-center" style="width: 50%;">Confirmar compra</a>
+                      
+                      <button type="button" class="volver btn btn-secondary" data-bs-dismiss="modal" style="width: 50%;">Volver</button>
+    
+    
+    
+                    </div>
                   </div>
-                  <div class="modal-footer row container-fluid justify-content-center">
-                    
-                    <a href="checkout.html" class="d-flex boton btn btn-primary justify-content-center align-content-center" style="width: 50%;">Confirmar compra</a>
-                    
-                    <button type="button" class="volver btn btn-secondary" data-bs-dismiss="modal" style="width: 50%;">Volver</button>
+               
+    
+    `
   
-  
-  
-                  </div>
-                </div>
-             
-  
-  `
+  };
 
-};
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', myFunction, false);
+  }
 
-
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', myFunction, false);
 }
+
+editarModal();
+
 
 
 // Filtro de searchbar por busqueda
@@ -488,7 +499,7 @@ function searchBarFilter(resultadoBusqueda) {
             <h5>${resultadoBusqueda[i].fechaBanda}</h5>
             <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
             <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${resultadoBusqueda[i].botonid}">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${resultadoBusqueda[i]}">
             Comprar tickets
             </button>
           </div>
@@ -496,6 +507,9 @@ function searchBarFilter(resultadoBusqueda) {
       </div>`;
     
     }
+    
+    // borrar pq no anda
+    editarModal();
 }
 
 
@@ -511,7 +525,7 @@ var posicion = 4;
 //La funcion del addeventListener que va creando el resto de las cards cada vez que el boton es apretado
 function mostrarBandas() { 
 
-
+    
     for(let i=posicion; i < (posicion +4); i++) {
         let crearCard = document.querySelector('#proximosEventos');
     
@@ -526,13 +540,14 @@ function mostrarBandas() {
             <h5>${bandas[i].fechaBanda}</h5>
             <h4 class="card-title">${bandas[i].nombreBanda}</h4>
             <p class="descripcion-evento">${bandas[i].lugarBanda} , ${bandas[i].regionBanda}</p>
-            <button type="button" class="boton btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${bandas[i].botonid}">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${i}">
             Comprar tickets
             </button>
           </div>
         </div>
       </div>`;
 
+      editarModal();
     }
 
     posicion = posicion + 4;
