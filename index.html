@@ -85,24 +85,15 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/slider-1-edit.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
+
           </div>
           <div class="carousel-item">
             <img src="img/slider-2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
+
           </div>
           <div class="carousel-item">
             <img src="img/slider-3-edit.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -177,13 +168,52 @@
 
       <main>
 
+        <section class="container-fluid">
+          
+          <!--Características INICIO-->
+            
+          <div class="container-fluid row">
+                <h1 style="text-align: center; margin-top: 1.5em; margin-bottom: 2em; text-transform: uppercase;" >Encontrá el evento que buscás.</h1>
+                <div class="container-fluid col-md-4">
+                  <div class="container">
+                    <img class="container img-fluid" src="img/undraw_compose_music_ovo2.svg" alt="">
+                  </div>
+                  <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
+                    Disfrutá de la música que te gusta
+                  </h2>
+                </div>
+  
+                <div class="container-fluid col-md-4">
+                  <div class="container">
+                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_mello_otq1.svg" alt="">
+                  </div>
+                  <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
+                    Disfrutá de tus artistas y bandas favoritos
+                  </h2>
+                </div>
+  
+                <div class="container-fluid col-md-4">
+                  <div class="container">
+                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_Location_search_re_ttoj.svg" alt="">
+                  </div>
+                  <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
+                    Disfrutá con la gente que quieras, en donde quieras
+                  </h2>
+                </div>
+  
+            </div> 
+            
+            <!--Características FIN-->
+  
+        </section>
+
       <!--Sección de próximos eventos INICIO-->
       
       <section class="container-fluid row justify-content-center container-margin">
 
         <div class="container-fluid row justify-content-center" style="margin-bottom: 2em;">
 
-          <h1 class="container" style="margin: 1em 0 1em 0;" id="proximosEventosTitle">PRÓXIMOS EVENTOS</h1>
+          <h2 class="container" style="margin: 1em 0 1em 0; font-size: 2.5em;" id="proximosEventosTitle">PRÓXIMOS EVENTOS</h2>
         
           <div id="proximosEventos" class="container-fluid row">
 
@@ -212,7 +242,21 @@
         
       <!--Sección próximos eventos FIN-->
 
-
+        
+        <!--Parallax con numeros-->
+        <div class="container-fluid">
+          <div class="contador parallax">
+            <div class="contenedor">
+              <ul class="resumen-evento clearfix">
+                <li><p class="numero"></p>Invitados</li>
+                <li><p class="numero"></p>Talleres</li>
+                <li><p class="numero"></p>Días</li>
+                <li><p class="numero"></p>Conferencias</li>
+              </ul>
+            </div>
+          
+          </div>
+        </div>
 
       <!--Modal disparado por los botones de compra de tickets-->
 
@@ -229,43 +273,7 @@
           
         </div>
 
-      <section class="container-fluid">
-          
-        <!--Características INICIO-->
-          <div class="container-fluid row">
-              <h2 style="text-align: center;">Encontrá el evento que buscás.</h2>
-              <div class="container-fluid col-md-4">
-                <div class="container">
-                  <img class="container img-fluid" src="img/undraw_compose_music_ovo2.svg" alt="">
-                </div>
-                <p class="container">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. A nesciunt esse, beatae magni odio in, commodi consectetur illum id dolor aliquam sit corrupti amet, consequatur porro nihil dicta pariatur. Aliquam!
-                </p>
-              </div>
 
-              <div class="container-fluid col-md-4">
-                <div class="container">
-                  <img class="container img-fluid" src="img/undraw_mello_otq1.svg" alt="">
-                </div>
-                <p class="container">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. A nesciunt esse, beatae magni odio in, commodi consectetur illum id dolor aliquam sit corrupti amet, consequatur porro nihil dicta pariatur. Aliquam!
-                </p>
-              </div>
-
-              <div class="container-fluid col-md-4">
-                <div class="container">
-                  <img class="container img-fluid" src="img/undraw_Location_search_re_ttoj.svg" alt="">
-                </div>
-                <p class="container">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. A nesciunt esse, beatae magni odio in, commodi consectetur illum id dolor aliquam sit corrupti amet, consequatur porro nihil dicta pariatur. Aliquam!
-                </p>
-              </div>
-
-          </div> 
-          
-          <!--Características FIN-->
-
-      </section>
 
     </main>
 
@@ -804,6 +812,7 @@
               console.log(busquedaUsuario)
 
               searchBarFilter(resultadoBusqueda);
+              
 
             })
           

@@ -4,12 +4,28 @@ h1 {
     color: $color-terciario;
     text-align: center;
     font-family: $titulo-principal;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+h1:before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0;
+    left: 45%;
+    border-bottom: 1px solid $color-terciario;
 }
 
 h2 {
     color: $color-principal;
     font-family: $cuerpo;
+    text-align: center;
 }
+
+
 
 h3 {
     color: $color-secundario;
@@ -49,4 +65,69 @@ h5 {
     background-color: $color-secundario;
     padding: 10px;
     border-radius: 20px;
+}
+
+.slider-title {
+    font-size: 5em;
+    color: $color-secundario;
+    text-transform: uppercase;
+}
+
+
+/** Contador **/
+
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+}
+
+div.contador {
+    position: relative;
+    height: auto;
+}
+
+div.contador::before {
+    background-image: url("/img/fondoevento-01.svg");
+    content: '';
+}
+
+ul.resumen-evento {
+    position: relative;
+    padding: 120px 0;
+}
+
+ul.resumen-evento li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: $color-principal;
+    text-transform: uppercase;
+    font-family: $cuerpo;
+    font-size: 24px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+@media only screen and (min-width: 768px) {
+    ul.resumen-evento li {
+        width: 25%;
+    }
+}
+
+p.numero {
+    color: $color-principal;
+    font-size: 3em;
+    display: block;
+    margin: 0 0 10px 0;
+    font-family: $cuerpo;
 }
