@@ -29,7 +29,7 @@ h1:before {
 
 h2 {
   color: #ff2e93;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   text-align: center;
 }
 
@@ -79,6 +79,13 @@ h5 {
   text-transform: uppercase;
 }
 
+.caracteristicas {
+  text-align: center;
+  color: #142664;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
 /** Contador **/
 .parallax {
   position: absolute;
@@ -86,7 +93,7 @@ h5 {
   /* Imagen de fondo */
   background-image: url("/img/fondoevento-01.svg");
   /* Altura mínima */
-  height: 5em;
+  height: 15em;
   /* Efecto parallax de fondo */
   background-attachment: fixed;
   background-position: center;
@@ -96,7 +103,7 @@ h5 {
 
 div.contador {
   position: relative;
-  height: 20em;
+  height: 30em !important;
 }
 
 .contadores {

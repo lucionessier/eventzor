@@ -391,7 +391,7 @@ function editarModal() {
     let modal = document.getElementById('modalBanda');
     modal.innerHTML = `
     
-                  <div class="modal-content" style="width:50%">
+                  <div class="modal-content" style="max-width:70%">
                     <div class="modal-header">
                       <h2 class="modal-title" id="modalBandaLabel">${bandas[e.target.id].nombreBanda}</h2>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
