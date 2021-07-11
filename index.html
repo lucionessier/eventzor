@@ -21,6 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!--Librería de animaciones AOS-->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--FontAwesome-->
 
@@ -176,7 +179,7 @@
                 <h1 style="text-align: center; margin-top: 1.5em; margin-bottom: 2em; text-transform: uppercase;" >Encontrá el evento que buscás.</h1>
                 <div class="container-fluid col-md-4">
                   <div class="container">
-                    <img class="container img-fluid" src="img/undraw_compose_music_ovo2.svg" alt="">
+                    <img class="container img-fluid" src="img/undraw_compose_music_ovo2.svg" alt="" data-aos="fade-down" data-aos-duration="1000">
                   </div>
                   <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
                     Disfrutá de la música que te gusta
@@ -185,7 +188,7 @@
   
                 <div class="container-fluid col-md-4">
                   <div class="container">
-                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_mello_otq1.svg" alt="">
+                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_mello_otq1.svg" alt="" data-aos="flip-left" data-aos-duration="1200">
                   </div>
                   <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
                     Disfrutá de tus artistas y bandas favoritos
@@ -194,7 +197,7 @@
   
                 <div class="container-fluid col-md-4">
                   <div class="container">
-                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_Location_search_re_ttoj.svg" alt="">
+                    <img class="container img-fluid" style="max-height: 210px;" src="img/undraw_Location_search_re_ttoj.svg" alt="" data-aos="fade-down" data-aos-duration="1400">
                   </div>
                   <h2 class="container" style="font-size: 1.5em;; text-align: center; margin-top: 1em;">
                     Disfrutá con la gente que quieras, en donde quieras
@@ -262,15 +265,15 @@
         <div class="container-fluid row align-content-center justify-content-center contador parallax container-margin">
           
           <div class="container col-md-4 align-content-center justify-content-center">
-            <li class="contadores"><p class="numero">+10.000</p>Tickets vendidos</li>
+            <li class="contadores" data-aos="fade-down" data-aos-duration="1600"><p class="numero"  data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="1400">+10.000</p>Tickets vendidos</li>
           </div>
 
           <div class="container col-md-4 align-content-center justify-content-center">
-            <li class="contadores"><p class="numero">+1500</p>Eventos</li>
+            <li class="contadores" data-aos="fade-down" data-aos-duration="1600"><p class="numero" data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="1400">+1500</p>Eventos</li>
           </div>
 
           <div class="container col-md-4 align-content-center justify-content-center">
-            <li class="contadores"><p class="numero">+850</p>Artistas</li>
+            <li class="contadores" data-aos="fade-down" data-aos-duration="1600"><p class="numero" data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="1400">+850</p>Artistas</li>
           </div>
 
         </div>
@@ -283,7 +286,7 @@
           <div class="container-fluid row align-content-center justify-content-center">
               <div class="container-fluid col-md-4 align-content-center">
                   <div class="container-fluid align-content-center">
-                    <img src="img/credit-card.svg" alt="" class="img-fluid" style="max-height: 10em;">
+                    <img src="img/credit-card.svg" alt="" class="img-fluid" style="max-height: 10em;" data-aos="fade-right" data-aos-duration="1000">
                   </div>
                   <h2>Fácil de pagar</h2>
                   <p class="caracteristicas">Aceptamos cualquier tarjeta de débito y crédito.</p>
@@ -291,7 +294,9 @@
 
               <div class="container-fluid col-md-4 align-content-center">
                   <div class="container-fluid align-content-center">
-                    <img src="img/lock.svg" alt="" class="img-fluid" style="max-height: 10em;">
+                    <img src="img/lock.svg" alt="" class="img-fluid" style="max-height: 10em;" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1100">
                   </div>
                   <h2>Compra protegida</h2>
                   <p class="caracteristicas">Tomamos en serio tus datos personales, por lo que cada transacción está protegida.</p>
@@ -299,7 +304,7 @@
 
               <div class="container-fluid col-md-4 align-content-center">
                   <div class="container-fluid align-content-center">
-                    <img src="img/move-right.svg" alt="" class="img-fluid" style="max-height: 10em;">
+                    <img src="img/move-right.svg" alt="" class="img-fluid" style="max-height: 10em;" data-aos="fade-left" data-aos-duration="1400">
                   </div>
                   <h2>Rápido</h2>
                   <p class="caracteristicas">Fácil, rápido e intuitivo de utilizar. En dos clicks tenés tus tickets.</p>
@@ -369,6 +374,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
+
+    <!--Libreria de animaciones AOS-->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+      AOS.refreshHard();
+    </script>
 
     <!--JQUERY-->
 

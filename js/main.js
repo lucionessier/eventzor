@@ -376,6 +376,7 @@ function filtradoPorMes () {
     editarModal();
 }
 
+
 // Edicion dinámica del contenido de modal
 
 
@@ -530,7 +531,9 @@ function mostrarBandas() {
         let crearCard = document.querySelector('#proximosEventos');
     
         crearCard.innerHTML += `
-        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
+        <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="800">
         <div class="card align-items-center">
           <img src="${bandas[i].imgFile}" class="card-img-top" alt="...">
           
