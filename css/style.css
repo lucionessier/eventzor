@@ -80,59 +80,44 @@ h5 {
 }
 
 /** Contador **/
-.parallax::before {
-  width: 100%;
-  height: 100%;
+.parallax {
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  /* Imagen de fondo */
+  background-image: url("/img/fondoevento-01.svg");
+  /* Altura mínima */
+  height: 5em;
+  /* Efecto parallax de fondo */
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  filter: brightness(0.8);
-  -webkit-filter: brightness(0.8);
 }
 
 div.contador {
   position: relative;
-  height: auto;
+  height: 20em;
 }
 
-div.contador::before {
-  background-image: url("/img/fondoevento-01.svg");
-  content: "";
-}
-
-ul.resumen-evento {
-  position: relative;
-  padding: 120px 0;
-}
-
-ul.resumen-evento li {
-  width: 50%;
-  float: left;
+.contadores {
   text-align: center;
   color: #ff2e93;
   text-transform: uppercase;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 24px;
+  font-family: "Nunito", sans-serif;
   list-style: none;
   font-weight: bold;
   font-size: 2.5em;
+  text-shadow: 2px 2px 2px #b9b9b9;
 }
 
-@media only screen and (min-width: 768px) {
-  ul.resumen-evento li {
-    width: 25%;
-  }
-}
 p.numero {
   color: #ff2e93;
-  font-size: 3em;
+  font-size: 1.7em;
   display: block;
   margin: 0 0 10px 0;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 2px #b9b9b9;
 }
 
 /* Seccion Busqueda */
