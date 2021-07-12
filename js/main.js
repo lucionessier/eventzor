@@ -401,6 +401,9 @@ function editarModal() {
     var botonesdecompra = document.getElementsByClassName('botonCompra');
 
     var funcionEditora = function(e) {
+      
+
+
     console.log(e.target.id);
     
     // Con una variable tomo el id modalBanda para que se edite de forma dinámica con innerHTML
@@ -424,11 +427,11 @@ function editarModal() {
                         
                         <div class="container-fluid" style="margin-top:1em;">
                           
-                          <div class="container-fluid">
+                          <div class="container-fluid" style="margin-bottom: 1em">
                             <i class="icons far fa-calendar-alt"></i> <p class="display-p">Fecha: ${bandas[e.target.id].fechaBanda}</p>
                           </div>
     
-                          <div class="container-fluid">
+                          <div class="container-fluid" style="margin-bottom: 1em">
                             <i class="icons fas fa-map-marker-alt"></i> <p class="display-p">Lugar: ${bandas[e.target.id].lugarBanda}</p>
                           </div>
     
@@ -438,32 +441,13 @@ function editarModal() {
                           <i class="icons fas fa-ticket-alt"></i><p class="display-p"> Entrada General: <span class="display-span">$${bandas[e.target.id].preciobanda}</span></p> 
                         </div>
     
-                                
-                        <div class="dropdown">
-                          <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            0
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#" >1</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="container-fluid">
-                          <i class="icons fas fa-star"></i><p class="display-p"> Entrada VIP: <span class="display-span">$${bandas[e.target.id].preciobandavip}</span></p>
-                        </div>
-    
-    
-                        <div class="dropdown">
-                          <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            0
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#" >1</a></li>
-                            </ul>
-                        </div>
-    
+                        <div class="container justify-content-center align-content-center">
+                          <input class="barra-busqueda form-control-modal me-2" style="width:30%" type="search" placeholder="Ingresá cantidad de tickets" aria-label="Search" id="inputTickets" >
+                        </div> 
+
+            
                         <div class="container-fluid" style="margin-top: 2em;">
-                          <h3 style="font-weight: bold;">Total a pagar: $ 54654</h3>
+                          <h3 style="font-weight: bold;" id="sumaTotalTickets">Total a pagar: $ </h3>
                         </div>
     
                       </div>
@@ -483,6 +467,36 @@ function editarModal() {
                
     
     `
+
+    // Esta variable toma el precio de la banda segun el id
+    var precio = `${bandas[e.target.id].preciobanda}`;
+
+    // Esta variable toma el ID input tickets, que pide al usuario ingresar cantidad
+
+    var cantidadTickets = document.getElementById('inputTickets');
+    
+    // Al input de los tickets le agrego un addeventlistener que tome el valor de lo que ingresa el usuario, lo convierta a entero, y sume el valor de la cantidad ingresada + el precio del ticket de la banda . Con un innerHTML lo agrego al h3 que imprime el valor.
+
+    cantidadTickets.addEventListener('input', e => {
+      e.preventDefault();
+      var cantidadTotal = e.target.value.toLowerCase();
+
+      precioTotalTickets = parseInt(cantidadTotal) * parseInt(precio);
+
+      console.log(precioTotalTickets);
+
+      var imprimirTotal = document.getElementById('sumaTotalTickets');
+
+      imprimirTotal.innerHTML = `
+            Total a pagar: $${precioTotalTickets}
+      `
+
+      if (cantidadTotal === '') {
+        imprimirTotal.innerHTML = `
+        Debes ingresar una cantidad de tickets.
+          `
+      }
+    })
   
   };
 
@@ -495,6 +509,11 @@ function editarModal() {
 
 // Ejecuto la funcion para que los elementos ya creados se editen
 editarModal();
+
+
+// ------- Edición dinámica del valor total de tickets
+
+
 
 
 // ------------- SEARCHBAR---------------
