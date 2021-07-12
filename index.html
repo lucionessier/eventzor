@@ -115,7 +115,7 @@
     
       <div class="container">
 
-        <form class="d-flex">
+        <form class="d-flex" id="formSearchBar">
             <input class="barra-busqueda form-control me-2" type="search" placeholder="Buscá eventos por nombre de banda o artista" aria-label="Search" id="searchBar" >
         </form>
 
@@ -181,7 +181,9 @@
           <!--Características INICIO-->
             
           <div class="container-fluid row" id="caracteristicas">
-                <h1 style="text-align: center; margin-top: 1.5em; margin-bottom: 2em; text-transform: uppercase;" >Encontrá el evento que buscás con Eventzor</h1>
+                <h1 style="text-align: center; margin-top: 1.5em; margin-bottom: 2em; text-transform: uppercase;" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1100"> Encontrá el evento que buscás con Eventzor</h1>
                 <div class="container-fluid col-md-4">
                   <div class="container">
                     <img class="container img-fluid" src="img/undraw_compose_music_ovo2.svg" alt="" data-aos="fade-down" data-aos-duration="1000">
@@ -221,7 +223,8 @@
 
         <div class="container-fluid row justify-content-center" style="margin-bottom: 2em;">
 
-          <h2 class="container" style="margin: 1em 0 1em 0; font-size: 2.5em; font-weight: bold;" id="proximosEventosTitle">PRÓXIMOS EVENTOS</h2>
+          <h2 class="container" style="margin: 1em 0 1em 0; font-size: 2.5em; font-weight: bold;" id="proximosEventosTitle" data-aos="fade-in"
+          data-aos-duration="1500">PRÓXIMOS EVENTOS</h2>
         
           <!--En este DIV se crean los elementos al iterar bandas con la funcion mostrarBandas()-->
 
