@@ -1,4 +1,4 @@
-// Creamos un array con 20 objetos (distintas bandas), para que posteriormente puedan iterarse tanto en la search bar como en el resto del código
+// Este array de objetos incluye las bandas que va a tener disponible el sitio
 
 let bandas = [
     
@@ -9,8 +9,8 @@ let bandas = [
         preciobandavip: 110,
         fechaBanda: "30/03/2022",
         nombreBanda: "Red Hot Chili Peppers",
-        lugarBanda: "Geekbar, Wellington, Nueva Zelanda",
-        regionBanda: "oceanía",
+        lugarBanda: "Geekbar, Wellington, NZ",
+        regionBanda: "Oceanía",
         botonid: "rhcp",
         modalid: 1
 
@@ -286,14 +286,18 @@ let bandas = [
 ];
 
 
-// Iteramos las bandas para que se muestren solamente 4 en la pantalla apenas se inicia
+// Esta función va a crear e iterar las primeras 4 bandas que se muestran en "Próximos eventos"
 
 function proxBandas () {
     
+    // Creo un for que itere en bandas.lenght y que solamente muestre 4 items
+
     for (let i = 0; i < bandas.length && i <= 3 ; i++) {
 
+        // Tomo el ID del div donde se van a crear las cards
         let crearCard = document.querySelector('#proximosEventos');
     
+        // Con innerHTML creo las cards
         crearCard.innerHTML += `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
@@ -315,16 +319,21 @@ function proxBandas () {
     }
 }
 
+// Ejecuto la función para que se muestre en el inicio
 proxBandas();
 
 
+// Esta funcion se va a disparar con los botones de región. Filtra los eventos según el valor de regiónbanda. 
 
 function filteredEvents () {
     
+    // Con el for creo las cards de la misma manera
     for (let i = 0; i < bandas.length && i <= 20 ; i++) {
 
+        // Tomo el div filteredByRegion para iterarlas ahí 
         let filtradosPorRegion = document.querySelector('#filteredByRegion');
     
+        // Creo las cards con innerHTML
         filtradosPorRegion.innerHTML += `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
@@ -344,16 +353,21 @@ function filteredEvents () {
     
     }
 
+    // La funcion de editarModal se ejecuta luego de filtrar los eventos
     editarModal();
 }
 
+// Esta funcion se va a disparar con los botones de filtrado por mes. Filtra los eventos según el valor de fechaBanda. 
 
 function filtradoPorMes () {
     
+    // Un for para crear las cards iterandolas 
     for (let i = 0; i < bandas.length && i <= 20 ; i++) {
 
+        // La variable para tomar el ID del div donde se van a crear las cards
         let filtradosPorFecha = document.getElementById('filteredByDate');
     
+        // El innerHTML con la creación correspondiente de las cards
         filtradosPorFecha.innerHTML += `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${bandas[i].id}">
         <div class="card align-items-center">
@@ -373,22 +387,23 @@ function filtradoPorMes () {
     
     }
 
+    // Esta funcion es la que edita los modales según el filtro
     editarModal();
 }
 
 
-// Edicion dinámica del contenido de modal
+// Esta función edita de forma dinámica el contenido del modal en HTML. Es la funcion que voy a llamar cada vez se haga click en un boton de compra .
 
 
 function editarModal() {
-    var elements = document.getElementsByClassName('botonCompra');
+    
+    // Con uan variable tomo todos los botones con con la clase botonCompra
+    var botonesdecompra = document.getElementsByClassName('botonCompra');
 
-
-
-
-    var myFunction = function(e) {
+    var funcionEditora = function(e) {
     console.log(e.target.id);
     
+    // Con una variable tomo el id modalBanda para que se edite de forma dinámica con innerHTML
     let modal = document.getElementById('modalBanda');
     modal.innerHTML = `
     
@@ -471,25 +486,30 @@ function editarModal() {
   
   };
 
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', myFunction, false);
+  // Este for itera todos los botones de compra y les agrega un addeventListener a cada uno.
+  for (var i = 0; i < botonesdecompra.length; i++) {
+    botonesdecompra[i].addEventListener('click', funcionEditora, false);
   }
 
 }
 
+// Ejecuto la funcion para que los elementos ya creados se editen
 editarModal();
 
 
+// ------------- SEARCHBAR---------------
 
-// Filtro de searchbar por busqueda
+// Esta funcion filtra en la searchbar segun el filtro creado en jQuery
 
 function searchBarFilter(resultadoBusqueda) {
 
-
+    // una variable que itere los elementos de resultadoBusqueda
     for (let i = 0; i < resultadoBusqueda.length && i <= 20 ; i++) {
 
+        // Tomo el ID del div filteredBySearch
         let filtradosBusqueda = document.getElementById('filteredBySearch');
     
+        // Itero los elementos segun el filtrado
         filtradosBusqueda.innerHTML = `
         <div class="container-fluid col-md-3 justify-content-center align-content-center" style="margin-bottom: 2em" id="${resultadoBusqueda[i].id}">
         <div class="card align-items-center">
@@ -513,7 +533,7 @@ function searchBarFilter(resultadoBusqueda) {
     editarModal();
 }
 
-
+// ----- BOTON VER MÁS------------
 
 // Creo una variable "displayMore = ver más en ingles". La agarro con elementbyId y le agrego el eventlistener que va a hacer que vaya mostrando el resto de los eventos cada vez que le hago click al boton .
 
