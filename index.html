@@ -39,11 +39,11 @@
 </head>
 <body>
 
-    <!--Barra de navegación INICIO-->
+
     <header>
 
-
-      <nav class="navegacion-principal navbar navbar fixed-top navbar-expand-lg"> <!--Barra de navegación inicio-->
+      <!--Barra de navegación INICIO-->
+      <nav class="navegacion-principal navbar navbar fixed-top navbar-expand-lg"> 
 
         <div class="container-fluid correccion-width">
             
@@ -111,21 +111,26 @@
 
       <!--Slider home FIN-->
 
-      <!--Buscador de eventos-->
+      <!--Barra de búsqueda INICIO-->
     
       <div class="container">
 
         <form class="d-flex">
             <input class="barra-busqueda form-control me-2" type="search" placeholder="Buscá eventos por nombre de banda o artista" aria-label="Search" id="searchBar" >
         </form>
+
         <h5 style="color: gray; font-style: italic; font-size: 15px;">[Sugerencias: Coldplay, Aerosmith, Metallica, Linkin Park, Maroon 5]</h5>
         
       </div>
+
+      <!--Barra de búsqueda FIN-->
       
-      <!--Dropwdowns-->
+      <!--Dropwdowns INICIO-->
 
       <div class="busqueda container-fluid row justify-content-center">
         
+        <!--Dropdown de búsqueda por MES INICIO-->
+
         <div class="dropdown col-md-6 ">
           <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             BUSCAR POR MES
@@ -146,6 +151,10 @@
           </ul>
         </div>
 
+        <!--Dropdown de búsqueda por MES FIN-->
+
+        <!--Dropdown de búsqueda por REGIÓN INICIO-->
+
         <div class="dropdown col-md-6">
           <button class="boton btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             BUSCAR POR REGIÓN
@@ -159,11 +168,11 @@
             <li id="oceania"><a class="dropdown-item" href="#">OCEANÍA</a></li>
           </ul>
         </div>
+        <!--Dropdown de búsqueda por REGIÓN FIN-->
 
-
-
+        
       </div>
-
+      <!--Dropdowns FIN-->
 
       <main>
 
@@ -214,18 +223,24 @@
 
           <h2 class="container" style="margin: 1em 0 1em 0; font-size: 2.5em; font-weight: bold;" id="proximosEventosTitle">PRÓXIMOS EVENTOS</h2>
         
+          <!--En este DIV se crean los elementos al iterar bandas con la funcion mostrarBandas()-->
+
           <div id="proximosEventos" class="container-fluid row">
 
           </div>
+
+          <!--En este DIV se crean los elementos a partir del filtro por region-->
 
           <div id="filteredByRegion" class="container-fluid row">
 
           </div>
 
+          <!--En este DIV se crean los elementos a partir de la busqueda por searchBar-->
           <div id="filteredBySearch" class="container-fluid row">
 
           </div>
 
+          <!--En este DIV se muestran los elementos con filtro por fecha-->
           <div id="filteredByDate" class="container-fluid row">
 
           </div>
@@ -233,6 +248,7 @@
 
           <div class="container row">
 
+            <!--Este botón dispara la funcion de mostrarBandas-->
             <a  id="verMas" class="container boton btn btn-primary justify-content-center align-content-center col-md-2" style="margin-bottom:1em;">VER MÁS</a>
             
           </div>
@@ -241,20 +257,6 @@
         
       <!--Sección próximos eventos FIN-->
 
-        
-        <!--Parallax con numeros-->
-        <!-- 
-          <div class="contador parallax">
-            <div class="contenedor">
-              <ul class="resumen-evento clearfix">
-                <li><p class="numero">10</p>Tickets vendidos</li>
-                <li><p class="numero">1000</p>Eventos</li>
-                <li><p class="numero">550</p>Artistas</li>
-              </ul>
-            </div>
-          
-
-        </div> -->
 
         <!--PARALLAX CON NUMEROS INICIO-->
 
@@ -308,22 +310,15 @@
           </div>
         </section>
 
+        <!--SECCIÓN POR QUE EVENTZOR FIN-->
 
       <!--Modal disparado por los botones de compra de tickets-->
 
-
-          <!--MODAL DE COMPRA DE TICKETS-->
-
-                <div class="modal fade" id="modalBanda" tabindex="-1" aria-labelledby="modalBandaLabel" aria-hidden="true">
-                <div class="modal-dialog"> </div>
-                </div>
+            <div class="modal fade" id="modalBanda" tabindex="-1" aria-labelledby="modalBandaLabel" aria-hidden="true">
+            <div class="modal-dialog"> </div>
+            </div>
       
         <!--Modal FIN-->
-
-        <div id="espaciomodal">
-          
-        </div>
-
 
 
     </main>
@@ -364,8 +359,14 @@
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     
+    
+    <!--Link al main.js-->
+
     <script src="js/main.js"></script> 
     
+
+    <!--Bootstrap-->
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
@@ -383,172 +384,55 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    
+    
+    <!--Inicio de script para el uso de jQuery-->
+
     <script>
 
       $(document).ready(function() {
 
           
-            
-            // Manipulacion del DOM para dropdowns de regiones
-
-            const botonAmericaNorte = $('#americaNorte');
-            const botonAmericaSur = $('#americaSur');
-            const botonEuropa = $('#europa');
-            const botonAsia = $('#asia');
-            const botonAfrica = $('#africa');
-            const botonOceania = $('#oceania');
+            // --------- SEARCHBAR ---------
 
             
-            // Test boton modal
-            var botonTest = $('#4');
+            // Con una variable, tomo el ID de la searchbar
+            const barraBusqueda = document.getElementById('searchBar');
 
-            botonTest.click(function(e){
-              e.preventDefault();
-              console.log("El boton funciona");
-            })
-
-            // América del Norte
-            botonAmericaNorte.click(function(e){
+            // Escucho el evento input en la searchbar
+            barraBusqueda.addEventListener('input', e => {
               
-              // El preventDefault para el boton
-              e.preventDefault();
-              
-              // Al hacer click en el boton América del Norte, se oculta el div de proximos eventos y muestra solo los filtrados de América del Norte
-
-              $('#proximosEventos').slideUp(1000);
-              $("#verMas").css("display","none");
-
-              // Al H1 con el id eventosTitle le agrego el título "América del Norte", en este caso
-
-              $("#proximosEventosTitle").append(
-                ` EN AMÉRICA DEL NORTE`
-              )
-
-
-              // Utilizo filter para que muestre solo los elementos con "America del Norte" del array de objetos 
-
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del norte'
-                  )
-              
-              filteredEvents(); 
-
-              
-            })
-
-
-            // De acá al resto de los dropdown, tienen todos exactamente el mismo paso, lo que cambia es el filtro por región
-
-            // América del Sur
-
-            botonAmericaSur.click(function(e){
-              
+              // PreventDefault para que la barra no actúe por default 
 
               e.preventDefault();
-              
 
+              // Declaro variable que tome el valor de la busqueda de barra de busqueda
+              const busquedaUsuario = e.target.value.toLowerCase();
+
+
+              // Animaciones para ocultar los divs como en los dropdowns
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN AMÉRICA DEL SUR`
-              )
+              // Utilizo un filter que con include tome el valor del target value de la barra
 
+              const resultadoBusqueda = bandas.filter(bandas => {
+                
+                return bandas.nombreBanda.toLowerCase().includes(busquedaUsuario);
 
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del sur'
-                  )
+              })
+
               
-              filteredEvents(); 
+              
+              // Ejecuto la funcion creada en main.js con resultadoBusqueda como parámetro
+              searchBarFilter(resultadoBusqueda);
+              
 
             })
 
-            // Europa
-            botonEuropa.click(function(e){
-              
-              
-              e.preventDefault();
-              
-
-              $('#proximosEventos').slideUp(1000);
-              $("#verMas").css("display","none");
-
-
-              $("#proximosEventosTitle").append(
-                ` EN EUROPA`
-              )
-
-
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'europa'
-                  )
-              
-              filteredEvents(); 
-            })
-
-            // Asia
-            botonAsia.click( function(e){
-
-              e.preventDefault();
-              
-
-              $('#proximosEventos').slideUp(1000);
-              $("#verMas").css("display","none");
-
-
-              $("#proximosEventosTitle").append(
-                ` EN ASIA`
-              )
-
-
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'asia'
-                  )
-              
-              filteredEvents(); 
-
-            })
-
-            // Africa
-            botonAfrica.click(function(e){
-
-              e.preventDefault();
-              
-              $('#proximosEventos').slideUp(1000);
-              $("#verMas").css("display","none");
-
-
-              $("#proximosEventosTitle").append(
-                ` EN ÁFRICA`
-              )
-
-
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'áfrica'
-                  )
-              
-              filteredEvents(); 
-
-            })
-
-            // Oceania
-            botonOceania.click(function(e){
-
-              e.preventDefault();
-
-
-              $('#proximosEventos').slideUp(1000);
-              $("#verMas").css("display","none");
-
-
-              $("#proximosEventosTitle").append(
-                ` EN OCEANÍA`
-              )
-
-              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'oceanía'
-                  )
-              
-              filteredEvents(); 
-
-            })
-
-            
+                        
             
           
 
@@ -569,6 +453,7 @@
             
             
             // Tomamos el botonEnero, previamente guardado en una variable y le hago el preventDefault
+
             botonEnero.click(function(e){
               
               
@@ -576,18 +461,21 @@
               
               // Estas animaciones igual que en el filtrado por region
 
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN ENERO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN ENERO`
               )
 
+              // El filtro de bandas según mes
 
               bandas = bandas.filter(el => el.fechaBanda.split('/')[1].toString() === '01'
                   )
 
+              // Ejecuto la funcion de filtrado creada en main.js
               filtradoPorMes(); 
               
             })
@@ -595,18 +483,20 @@
             // El mismo filtro con el resto de los meses, pero varía el valor del toString()
 
 
+            // FEBRERO
+
             botonFebrero.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN FEBRERO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN FEBRERO`
               )
 
 
@@ -617,18 +507,20 @@
               
             })
 
+
+            // MARZO
             botonMarzo.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN MARZO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN MARZO`
               )
 
 
@@ -639,18 +531,21 @@
               
             })
 
+
+            // ABRIL 
+
             botonAbril.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
               $("#proximosEventosTitle").html(
-                ` EN ABRIL`
+                `PRÓXIMOS EVENTOS EN ABRIL`
               )
 
               
@@ -662,18 +557,21 @@
               
             })
 
+
+            // MAYO
+
             botonMayo.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
               $("#proximosEventosTitle").html(
-                ` EN MAYO`
+                `PRÓXIMOS EVENTOS EN MAYO`
               )
 
 
@@ -684,18 +582,20 @@
               
             })
 
+            // JUNIO
+
             botonJunio.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN JUNIO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN JUNIO`
               )
 
 
@@ -706,18 +606,20 @@
               
             })
 
+            // JULIO
+
             botonJulio.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN JULIO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN JULIO`
               )
 
 
@@ -728,18 +630,20 @@
               
             })
 
+            // AGOSTO
+
             botonAgosto.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN AGOSTO`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN AGOSTO`
               )
 
 
@@ -750,18 +654,19 @@
               
             })
 
+            // SEPTIEMBRE
             botonSeptiembre.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN SEPTIEMBRE`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN SEPTIEMBRE`
               )
 
 
@@ -772,18 +677,19 @@
               
             })
 
+            // OCTUBRE
             botonOctubre.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN OCTUBRE`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN OCTUBRE`
               )
 
 
@@ -794,18 +700,20 @@
               
             })
 
+            // NOVIEMBRE
+
             botonNoviembre.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN NOVIEMBRE`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN NOVIEMBRE`
               )
 
 
@@ -816,18 +724,20 @@
               
             })
 
+            // DICIEMBRE
+
             botonDiciembre.click(function(e){
               
               
               e.preventDefault();
               
-
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              $("#proximosEventosTitle").append(
-                ` EN DICIEMBRE`
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN DICIEMBRE`
               )
 
 
@@ -838,38 +748,164 @@
               
             })
 
-            // --------- SEARCHBAR ---------
 
-            const barraBusqueda = document.getElementById('searchBar');
 
-            barraBusqueda.addEventListener('input', e => {
+            // Manipulacion del DOM para dropdowns de regiones
+
+            const botonAmericaNorte = $('#americaNorte');
+            const botonAmericaSur = $('#americaSur');
+            const botonEuropa = $('#europa');
+            const botonAsia = $('#asia');
+            const botonAfrica = $('#africa');
+            const botonOceania = $('#oceania');
+
+
+            // América del Norte
+            botonAmericaNorte.click(function(e){
               
-              // PreventDefault para que la barra no actúe por default 
+              // El preventDefault para el boton
+              e.preventDefault();
+              
+              // Al hacer click en el boton América del Norte, se oculta el div de proximos eventos, el de características y muestra solo los filtrados en América del Norte
+
+              $('#caracteristicas').slideUp(1000);
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+              // Al H1 con el id eventosTitle le agrego el título "América del Norte", en este caso
+
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN AMÉRICA DEL NORTE`
+              )
+
+
+              // Utilizo filter para que muestre solo los elementos con "America del Norte" del array de objetos 
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del norte'
+                  )
+              
+              // Ejecuto la funcion de filtrado creada en main.js
+              filteredEvents(); 
+
+              
+            })
+
+
+            // De acá al resto de los dropdown, tienen todos exactamente el mismo paso, lo que cambia es el filtro por región
+
+            // América del Sur
+
+            botonAmericaSur.click(function(e){
+              
 
               e.preventDefault();
-
-              // Declaro variable que tome el valor de la busqueda de barra de busqueda
-              const busquedaUsuario = e.target.value.toLowerCase();
-
-              // Utilizo un filter que con include tome el valor del target value de la barra
               
+              $('#caracteristicas').slideUp(1000);
               $('#proximosEventos').slideUp(1000);
               $("#verMas").css("display","none");
 
 
-              const resultadoBusqueda = bandas.filter(bandas => {
-                
-                return bandas.nombreBanda.toLowerCase().includes(busquedaUsuario);
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN AMÉRICA DEL SUR`
+              )
 
-              })
 
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'américa del sur'
+                  )
               
-              console.log(busquedaUsuario)
-
-              searchBarFilter(resultadoBusqueda);
-              
+              filteredEvents(); 
 
             })
+
+            // Europa
+            botonEuropa.click(function(e){
+              
+              
+              e.preventDefault();
+              
+              $('#caracteristicas').slideUp(1000);
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN EUROPA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'europa'
+                  )
+              
+              filteredEvents(); 
+
+            })
+
+            // Asia
+            botonAsia.click( function(e){
+
+              e.preventDefault();
+              
+              $('#caracteristicas').slideUp(1000);
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN ASIA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'asia'
+                  )
+              
+              filteredEvents(); 
+
+            })
+
+            // Africa
+            botonAfrica.click(function(e){
+
+              e.preventDefault();
+
+              $('#caracteristicas').slideUp(1000);
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN ÁFRICA`
+              )
+
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'áfrica'
+                  )
+              
+              filteredEvents(); 
+
+            })
+
+            // Oceania
+            botonOceania.click(function(e){
+
+              e.preventDefault();
+
+              $('#caracteristicas').slideUp(1000);
+              $('#proximosEventos').slideUp(1000);
+              $("#verMas").css("display","none");
+
+
+              $("#proximosEventosTitle").html(
+                `PRÓXIMOS EVENTOS EN OCEANÍA`
+              )
+
+              bandas = bandas.filter(el => el.regionBanda.toLowerCase() === 'oceanía'
+                  )
+              
+              filteredEvents(); 
+
+            })
+
+
             
           
       });
