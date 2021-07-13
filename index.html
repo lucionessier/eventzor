@@ -424,6 +424,7 @@
               const resultadoBusqueda = bandas.filter(bandas => {
                 
                 return bandas.nombreBanda.toLowerCase().includes(busquedaUsuario);
+                
 
               })
 
@@ -431,8 +432,8 @@
               
               // Ejecuto la funcion creada en main.js con resultadoBusqueda como parámetro
               searchBarFilter(resultadoBusqueda);
+              editarModal(resultadoBusqueda);
               
-
             })
 
                         

@@ -442,7 +442,7 @@ function editarModal() {
                         </div>
     
                         <div class="container justify-content-center align-content-center">
-                          <input class="barra-busqueda form-control-modal me-2" style="width:30%" type="search" placeholder="Ingresá cantidad de tickets" aria-label="Search" id="inputTickets" >
+                          <input class="barra-busqueda form-control-modal me-2" style="width:30%" type="number" placeholder="Ingresá cantidad de tickets" min="0" max="10" aria-label="tickets" id="inputTickets" >
                         </div> 
 
             
@@ -491,7 +491,7 @@ function editarModal() {
             Total a pagar: $${precioTotalTickets}
       `
 
-      if (cantidadTotal === '') {
+      if (cantidadTotal === '' || cantidadTotal === 0) {
         imprimirTotal.innerHTML = `
         Debes ingresar una cantidad de tickets.
           `
@@ -511,10 +511,6 @@ function editarModal() {
 editarModal();
 
 
-// ------- Edición dinámica del valor total de tickets
-
-
-
 
 // ------------- SEARCHBAR---------------
 
@@ -522,6 +518,7 @@ editarModal();
 
 function searchBarFilter(resultadoBusqueda) {
 
+    
     // una variable que itere los elementos de resultadoBusqueda
     for (let i = 0; i < resultadoBusqueda.length && i <= 20 ; i++) {
 
@@ -539,7 +536,7 @@ function searchBarFilter(resultadoBusqueda) {
             <h5>${resultadoBusqueda[i].fechaBanda}</h5>
             <h4 class="card-title">${resultadoBusqueda[i].nombreBanda}</h4>
             <p class="descripcion-evento">${resultadoBusqueda[i].lugarBanda} , ${resultadoBusqueda[i].regionBanda}</p>
-            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${resultadoBusqueda[i]}">
+            <button type="button" class="boton botonCompra btn btn-primary justify-content-center align-content-center" data-bs-toggle="modal" data-bs-target="#modalBanda" style="margin-bottom: 1.5em;" id="${i}">
             Comprar tickets
             </button>
           </div>
@@ -548,8 +545,9 @@ function searchBarFilter(resultadoBusqueda) {
     
     }
     
-    // borrar pq no anda
-    editarModal();
+    
+    
+    
 }
 
 // -------------- BOTON VER MÁS--------------------
