@@ -30,8 +30,9 @@ nav a {
 
 .logo {
     border-bottom: none;
-    width: 100%;
+    width: 90%;
     height: 4em;
+    display: inline;
 
     &:hover {
         border-bottom: none;
@@ -64,5 +65,15 @@ nav a {
 
     &:hover, &:active, &:focus {
         color: $color-principal;
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .logo {
+        border-bottom: none;
+        width: 70%;
+        height: 4em;
+        display: inline;
+
     }
 }

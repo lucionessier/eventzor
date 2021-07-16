@@ -334,8 +334,9 @@ nav a:active {
 
 .logo {
   border-bottom: none;
-  width: 100%;
+  width: 90%;
   height: 4em;
+  display: inline;
 }
 .logo:hover {
   border-bottom: none;
@@ -368,6 +369,14 @@ nav a:active {
   color: #ff2e93;
 }
 
+@media only screen and (max-width: 760px) {
+  .logo {
+    border-bottom: none;
+    width: 70%;
+    height: 4em;
+    display: inline;
+  }
+}
 footer {
   background-color: #00e6b3;
   padding-bottom: 20px;
