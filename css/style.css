@@ -103,7 +103,7 @@ h5 {
 
 div.contador {
   position: relative;
-  height: 30em !important;
+  height: 35em !important;
 }
 
 .contadores {
@@ -167,6 +167,11 @@ p.numero {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 770px) {
+  .querieMargin {
+    margin-bottom: 4em;
+  }
+}
 /* Botones */
 .boton {
   background-color: #ff2e93;
@@ -413,6 +418,11 @@ footer div h3 {
   display: none;
 }
 
+@media only screen and (max-width: 770px) {
+  #verMas {
+    width: 50%;
+  }
+}
 /* Estilos formulario */
 .inputs-form {
   margin: 2em 0 2em 0;
