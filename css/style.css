@@ -144,6 +144,11 @@ p.numero {
   border-color: #142664;
 }
 
+@media only screen and (max-width: 768px) {
+  .barra-busqueda {
+    width: 70% !important;
+  }
+}
 /* Dropdowns*/
 .dropdown-item {
   display: block;
